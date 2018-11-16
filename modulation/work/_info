@@ -1,0 +1,115 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/STI/Project/ModelSim/clock_fifth
+vcarr
+Z0 !s110 1506671813
+!i10b 1
+!s100 ^cPO@gmR=gVj<]UiYgDDe3
+InTGmD98`7H1P_>MIX9akg0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/STI/Project/ModelSim/modulation
+w1505921259
+8E:/STI/Project/ModelSim/modulation/carry.v
+FE:/STI/Project/ModelSim/modulation/carry.v
+L0 1
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1506671813.000000
+!s107 E:/STI/Project/ModelSim/modulation/carry.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/modulation/carry.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vmod
+Z6 !s110 1506671814
+!i10b 1
+!s100 ^<V?H88BTe]So_JkKJ:JI0
+IIj8]1Qh8gfaXfZ0@dCOXN0
+R1
+R2
+w1506671805
+8E:/STI/Project/ModelSim/modulation/mod.v
+FE:/STI/Project/ModelSim/modulation/mod.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z7 !s108 1506671814.000000
+!s107 E:/STI/Project/ModelSim/modulation/mod.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/modulation/mod.v|
+!s101 -O0
+!i113 1
+R5
+vsiggen
+R0
+!i10b 1
+!s100 =KB]2SJ>1Kh75f3^MO3dN0
+IjX:jU?jCZkz`:M9XkSkO^0
+R1
+R2
+w1506671793
+8E:/STI/Project/ModelSim/modulation/siggen.v
+FE:/STI/Project/ModelSim/modulation/siggen.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/modulation/siggen.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/modulation/siggen.v|
+!s101 -O0
+!i113 1
+R5
+vtb
+R0
+!i10b 1
+!s100 MzKb?g3cnoHVOhf3`I42z2
+I8bbBk?8ZSZ4]XFgRO1^Aa2
+R1
+R2
+w1506186253
+8E:/STI/Project/ModelSim/modulation/tb_modu.v
+FE:/STI/Project/ModelSim/modulation/tb_modu.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/modulation/tb_modu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/modulation/tb_modu.v|
+!s101 -O0
+!i113 1
+R5
+vtop
+R6
+!i10b 1
+!s100 7H_8l[_UcLmZIJ>oV=id93
+IziAB=N1Mcc@`>DYeWY]bO0
+R1
+R2
+w1506220915
+8E:/STI/Project/ModelSim/modulation/top.v
+FE:/STI/Project/ModelSim/modulation/top.v
+L0 1
+R3
+r1
+!s85 0
+31
+R7
+!s107 E:/STI/Project/ModelSim/modulation/top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/modulation/top.v|
+!s101 -O0
+!i113 1
+R5

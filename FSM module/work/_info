@@ -1,0 +1,116 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/STI/Project/ModelSim/dds_to_fb_debug
+valw
+Z0 !s110 1504801370
+!i10b 1
+!s100 5dn=V:`bd:Ii712LLY9AM3
+IJE:Gna]QG^l[9O]J_KEKF1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/STI/Project/ModelSim/FSM module
+w1504801367
+8E:\STI\Project\ModelSim\FSM module\always_test.v
+FE:\STI\Project\ModelSim\FSM module\always_test.v
+L0 1
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1504801370.000000
+!s107 E:\STI\Project\ModelSim\FSM module\always_test.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\STI\Project\ModelSim\FSM module\always_test.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+valwa_tb
+R0
+!i10b 1
+!s100 [z^;DjLUV<CbT_hFH_W1f0
+IV2`>3gCeii?]M@Th^5=7h3
+R1
+R2
+w1504801275
+8E:/STI/Project/ModelSim/FSM module/always_tb.v
+FE:/STI/Project/ModelSim/FSM module/always_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/FSM module/always_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/FSM module/always_tb.v|
+!s101 -O0
+!i113 1
+R5
+vFSM
+Z6 !s110 1504801369
+!i10b 1
+!s100 GzB:[3Tj4Jkm5^cBU[Z[B1
+IF2cj<?lFL3=SVi<J<KAbP0
+R1
+R2
+w1504766087
+8E:/STI/Project/ModelSim/FSM module/FSM.v
+FE:/STI/Project/ModelSim/FSM module/FSM.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z7 !s108 1504801369.000000
+!s107 E:/STI/Project/ModelSim/FSM module/FSM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/FSM module/FSM.v|
+!s101 -O0
+!i113 1
+R5
+n@f@s@m
+vtb_fsm
+R6
+!i10b 1
+!s100 HPoO@ZBLSFZ=iWU6@T<?f1
+I4^`VlW2I4^To<S79lG`fU1
+R1
+R2
+w1504770224
+8E:/STI/Project/ModelSim/FSM module/tb_fsm.v
+FE:/STI/Project/ModelSim/FSM module/tb_fsm.v
+L0 2
+R3
+r1
+!s85 0
+31
+R7
+!s107 E:/STI/Project/ModelSim/FSM module/tb_fsm.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/FSM module/tb_fsm.v|
+!s101 -O0
+!i113 1
+R5
+vtop_fsm
+R6
+!i10b 1
+!s100 @1K:@=2W9KHG;[MH`=]Nn3
+I8F63R]@=hYz[O]keX?=4T0
+R1
+R2
+w1504797312
+8E:/STI/Project/ModelSim/FSM module/top_fsm.v
+FE:/STI/Project/ModelSim/FSM module/top_fsm.v
+L0 2
+R3
+r1
+!s85 0
+31
+R7
+!s107 E:/STI/Project/ModelSim/FSM module/top_fsm.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/FSM module/top_fsm.v|
+!s101 -O0
+!i113 1
+R5

@@ -1,0 +1,43 @@
+E:/STI/Project/ModelSim/74HC161/tb_74HC161.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/74HC161/tb_74HC161.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb_74HC161
+
+Top level modules:
+	tb_74HC161
+
+} {} {}} E:/STI/Project/ModelSim/74HC161/74HC283.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/74HC161/74HC283.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module A_74HC283
+
+Top level modules:
+	A_74HC283
+
+} {} {}} E:/STI/Project/ModelSim/74HC161/74HC194.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/74HC161/74HC194.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module S_74HC194
+
+Top level modules:
+	S_74HC194
+
+} {} {}} E:/STI/Project/ModelSim/74HC161/tb_74HC283.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/74HC161/tb_74HC283.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb_74HC283
+
+Top level modules:
+	tb_74HC283
+
+} {} {}} E:/STI/Project/ModelSim/74HC161/tb_74HC194.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/74HC161/tb_74HC194.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb_74HC194
+
+Top level modules:
+	tb_74HC194
+
+} {} {}} E:/STI/Project/ModelSim/74HC161/74HC161.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/74HC161/74HC161.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Counter_74HC161
+
+Top level modules:
+	Counter_74HC161
+
+} {} {}}

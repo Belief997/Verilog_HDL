@@ -1,0 +1,265 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/STI/Project/ModelSim/test_ram
+vcordic
+Z0 !s110 1528623037
+!i10b 1
+!s100 XB]U91Bkh[d^`b90M=XZ60
+Ie_6H1i_c6fC<TE:fNFW9e1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/STI/Project/ModelSim/sofmax
+w1519833695
+8E:/STI/Project/ModelSim/sofmax/cordic_v1.v
+FE:/STI/Project/ModelSim/sofmax/cordic_v1.v
+L0 2
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1528623037.000000
+!s107 E:/STI/Project/ModelSim/sofmax/cordic_v1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/sofmax/cordic_v1.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vFP_Test
+Z6 !s110 1528623038
+!i10b 1
+!s100 _amTlh;M>H0m>haQ;bnmI1
+IgKIRSGIXkMJf0z1`TjEjz1
+R1
+R2
+w1524316992
+8E:/STI/Project/ModelSim/sofmax/FP_Test.v
+FE:/STI/Project/ModelSim/sofmax/FP_Test.v
+L0 2
+R3
+r1
+!s85 0
+31
+Z7 !s108 1528623038.000000
+!s107 E:/STI/Project/ModelSim/sofmax/FP_Test.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/sofmax/FP_Test.v|
+!s101 -O0
+!i113 1
+R5
+n@f@p_@test
+vfpmul
+R6
+!i10b 1
+!s100 UbEEh^egGh3;Wz4J09XmJ3
+IX4BBY4dC_3_L3WFAjZTdA3
+R1
+R2
+w1524152460
+8E:/STI/Project/ModelSim/sofmax/fpmul.v
+FE:/STI/Project/ModelSim/sofmax/fpmul.v
+L0 2
+R3
+r1
+!s85 0
+31
+R7
+!s107 E:/STI/Project/ModelSim/sofmax/fpmul.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/sofmax/fpmul.v|
+!s101 -O0
+!i113 1
+R5
+vget_exp
+R6
+!i10b 1
+!s100 _C`:aS>1YIj5=M_3MA]Ul1
+I>_PC6BW;>oCoELofIO>_g3
+R1
+R2
+w1528463838
+8E:/STI/Project/ModelSim/sofmax/get_exp.v
+FE:/STI/Project/ModelSim/sofmax/get_exp.v
+L0 2
+R3
+r1
+!s85 0
+31
+R7
+!s107 E:/STI/Project/ModelSim/sofmax/get_exp.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/sofmax/get_exp.v|
+!s101 -O0
+!i113 1
+R5
+vget_exp_shift
+Z8 !s110 1528623039
+!i10b 1
+!s100 na5R=<eIjPNobL;h6D58<2
+I1TlR4i]6SnbG3D75jcD:D3
+R1
+R2
+Z9 w1528622454
+Z10 8E:/STI/Project/ModelSim/sofmax/get_exp_shift.v
+Z11 FE:/STI/Project/ModelSim/sofmax/get_exp_shift.v
+L0 2
+R3
+r1
+!s85 0
+31
+R7
+Z12 !s107 E:/STI/Project/ModelSim/sofmax/get_exp_shift.v|
+Z13 !s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/sofmax/get_exp_shift.v|
+!s101 -O0
+!i113 1
+R5
+vget_jmr
+R6
+!i10b 1
+!s100 1ie68knzS6MeYICe=UF5k0
+IK>7B^n@gRMoU=7WhkkPi@2
+R1
+R2
+w1528378065
+8E:/STI/Project/ModelSim/sofmax/get_jmr.v
+FE:/STI/Project/ModelSim/sofmax/get_jmr.v
+L0 2
+R3
+r1
+!s85 0
+31
+R7
+!s107 E:/STI/Project/ModelSim/sofmax/get_jmr.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/sofmax/get_jmr.v|
+!s101 -O0
+!i113 1
+R5
+vget_jmr_dp
+R6
+!i10b 1
+!s100 l6]]`7foO@g<ilJhD:0Mg0
+Ik2jG_]z]XRPKUZnJXO=E22
+R1
+R2
+w1528463644
+8E:/STI/Project/ModelSim/sofmax/get_jmr_dp.v
+FE:/STI/Project/ModelSim/sofmax/get_jmr_dp.v
+L0 2
+R3
+r1
+!s85 0
+31
+R7
+!s107 E:/STI/Project/ModelSim/sofmax/get_jmr_dp.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/sofmax/get_jmr_dp.v|
+!s101 -O0
+!i113 1
+R5
+vShift_add_0
+R8
+!i10b 1
+!s100 :;WdK5PSM<PNzLZRNBcGf3
+IMVVY7PVYVEN]f930ao1:b1
+R1
+R2
+R9
+R10
+R11
+L0 295
+R3
+r1
+!s85 0
+31
+R7
+R12
+R13
+!s101 -O0
+!i113 1
+R5
+n@shift_add_0
+vShift_add_1
+R8
+!i10b 1
+!s100 ZU3@`R7QU=bHYi;O50c<D3
+IKomaU0b@`WjQJ9I;4@`OH3
+R1
+R2
+R9
+R10
+R11
+L0 320
+R3
+r1
+!s85 0
+31
+R7
+R12
+R13
+!s101 -O0
+!i113 1
+R5
+n@shift_add_1
+vtb
+R0
+!i10b 1
+!s100 d4kJTG=SXfP5CPXaUDfmV1
+I^mkYz>KV_T3_01RCbh;[C1
+R1
+R2
+w1528450248
+8E:/STI/Project/ModelSim/sofmax/tb.v
+FE:/STI/Project/ModelSim/sofmax/tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/sofmax/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/sofmax/tb.v|
+!s101 -O0
+!i113 1
+R5
+vtb_1
+!s110 1528621995
+!i10b 1
+!s100 _1iW7;N@Y>zfH?YX6mI5;3
+I@R`P]AgR`c22:cJbQSS?:2
+R1
+R2
+w1528621991
+8E:/STI/Project/ModelSim/sofmax/tb_1.v
+FE:/STI/Project/ModelSim/sofmax/tb_1.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1528621995.000000
+!s107 E:/STI/Project/ModelSim/sofmax/tb_1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/sofmax/tb_1.v|
+!s101 -O0
+!i113 1
+R5
+vtop
+R0
+!i10b 1
+!s100 0X:n``gH71:_2DBAKR[H^2
+I9h7TFHnmNRc_8TQO6JAek0
+R1
+R2
+w1524361076
+8E:/STI/Project/ModelSim/sofmax/top.v
+FE:/STI/Project/ModelSim/sofmax/top.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/sofmax/top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/sofmax/top.v|
+!s101 -O0
+!i113 1
+R5

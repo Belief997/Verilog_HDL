@@ -1,0 +1,78 @@
+E:/STI/Project/ModelSim/sofmax/Shift_add_0.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/sofmax/Shift_add_0.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+
+} {} {}} E:/STI/Project/ModelSim/sofmax/Shift_add_1.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/sofmax/Shift_add_1.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+
+} {} {}} E:/STI/Project/ModelSim/sofmax/tb_1.v {0 {vlog -work work -stats=none E:/STI/Project/ModelSim/sofmax/tb_1.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb_1
+** Error: (vlog-13051) E:/STI/Project/ModelSim/sofmax/tb_1.v(19): Illegal digit for specified base in numeric constant.
+
+
+} {4.0 5.0} {}} E:/STI/Project/ModelSim/sofmax/cordic_v1.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/sofmax/cordic_v1.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module cordic
+
+Top level modules:
+	cordic
+
+} {} {}} E:/STI/Project/ModelSim/sofmax/top.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/sofmax/top.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} E:/STI/Project/ModelSim/sofmax/get_jmr_dp.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/sofmax/get_jmr_dp.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module get_jmr_dp
+
+Top level modules:
+	get_jmr_dp
+
+} {} {}} E:/STI/Project/ModelSim/sofmax/fpmul.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/sofmax/fpmul.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fpmul
+
+Top level modules:
+	fpmul
+
+} {} {}} E:/STI/Project/ModelSim/sofmax/get_exp.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/sofmax/get_exp.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module get_exp
+
+Top level modules:
+	get_exp
+
+} {} {}} E:/STI/Project/ModelSim/sofmax/FP_Test.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/sofmax/FP_Test.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module FP_Test
+
+Top level modules:
+	FP_Test
+
+} {} {}} E:/STI/Project/ModelSim/sofmax/tb.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/sofmax/tb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} E:/STI/Project/ModelSim/sofmax/get_jmr.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/sofmax/get_jmr.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module get_jmr
+
+Top level modules:
+	get_jmr
+
+} {} {}} E:/STI/Project/ModelSim/sofmax/get_exp_shift.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/sofmax/get_exp_shift.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module get_exp_shift
+-- Compiling module Shift_add_0
+-- Compiling module Shift_add_1
+
+Top level modules:
+	get_exp_shift
+
+} {} {}}

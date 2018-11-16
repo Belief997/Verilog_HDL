@@ -1,0 +1,16 @@
+//PE & CR Low_active
+module Counter_74HC161(
+	input CEP,CET,PE,CP,CR,
+	input [3:0] D,
+	output TC,
+	output [3:0] Q
+	);
+	reg [3:0] q; initial q = 'b0;	
+	always@(posedge CP)
+		if(~CR) q <= 4'h0;
+		else if(~PE) q <= D;
+		else if(CEP & CET) q <= q + 1'b1;
+		else q <= q;
+	assign Q = CR? q : 4'b0;
+	assign TC = CET & (Q == 4'b1111);	
+endmodule 

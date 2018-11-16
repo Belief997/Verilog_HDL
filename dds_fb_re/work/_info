@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/STI/Project/ModelSim/FSM module
+vdds_to_fb
+Z0 !s110 1504757893
+!i10b 1
+!s100 1ziQiEM4SASEHM_NeDH[82
+INT2;3W_D]<6DcGaJo;be72
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/STI/Project/ModelSim/dds_fb_re
+w1504757363
+8E:/STI/Project/ModelSim/dds_fb_re/dds_to_fb.v
+FE:/STI/Project/ModelSim/dds_fb_re/dds_to_fb.v
+L0 2
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1504757893.000000
+!s107 E:/STI/Project/ModelSim/dds_fb_re/dds_to_fb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/dds_fb_re/dds_to_fb.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vkeys
+R0
+!i10b 1
+!s100 gg3e;d3aHKd68B=XEmz`E1
+IE<dXHn1Rb=_LY8BS;oAO[2
+R1
+R2
+w1504756687
+8E:/STI/Project/ModelSim/dds_fb_re/keys.v
+FE:/STI/Project/ModelSim/dds_fb_re/keys.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/dds_fb_re/keys.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/dds_fb_re/keys.v|
+!s101 -O0
+!i113 1
+R5
+vtb_re
+R0
+!i10b 1
+!s100 D6KU9fD5Fj6b3mbGLM4k01
+I=7mm1;E=O?fDB_TU357iH1
+R1
+R2
+w1504756667
+8E:\STI\Project\ModelSim\dds_fb_re\tb_re.v
+FE:\STI\Project\ModelSim\dds_fb_re\tb_re.v
+L0 68
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:\STI\Project\ModelSim\dds_fb_re\tb_re.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\STI\Project\ModelSim\dds_fb_re\tb_re.v|
+!s101 -O0
+!i113 1
+R5
+vtop
+R0
+!i10b 1
+!s100 ]DjSTj=NHiM3WDEh>6^WS2
+IDj3eCno_VMKnIJOeSfGeX3
+R1
+R2
+w1504756678
+8E:/STI/Project/ModelSim/dds_fb_re/top.v
+FE:/STI/Project/ModelSim/dds_fb_re/top.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/dds_fb_re/top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/dds_fb_re/top.v|
+!s101 -O0
+!i113 1
+R5

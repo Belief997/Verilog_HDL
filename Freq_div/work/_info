@@ -1,0 +1,53 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/STI/Project/ModelSim/DDS_driver
+vFretoFre
+Z0 !s110 1520672676
+!i10b 1
+!s100 OEN8m=?XKIFe6XboTEVQf0
+IE4ghjfB@UPO<6F1Iej6dM0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/STI/Project/ModelSim/Freq_div
+w1520672675
+8E:/STI/Project/ModelSim/Freq_div/Freq_div.v
+FE:/STI/Project/ModelSim/Freq_div/Freq_div.v
+L0 2
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1520672676.000000
+!s107 E:/STI/Project/ModelSim/Freq_div/Freq_div.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Freq_div/Freq_div.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@freto@fre
+vtb
+R0
+!i10b 1
+!s100 T3`9PX8:1TnU1dX5_<Wi93
+Ij[[nmiM@RXU^J14R6?ZH83
+R1
+R2
+w1520672594
+8E:/STI/Project/ModelSim/Freq_div/tb.v
+FE:/STI/Project/ModelSim/Freq_div/tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/Freq_div/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Freq_div/tb.v|
+!s101 -O0
+!i113 1
+R5

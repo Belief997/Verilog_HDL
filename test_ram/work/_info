@@ -1,0 +1,52 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/STI/Project/ModelSim/heart
+vtb
+Z0 !s110 1518769196
+!i10b 1
+!s100 d`[Qh4^D7_^o3z?>f?fe03
+Idk0;ab=IPDdiTW[Xzoh_30
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/STI/Project/ModelSim/test_ram
+w1518691789
+8E:/STI/Project/ModelSim/test_ram/tb.v
+FE:/STI/Project/ModelSim/test_ram/tb.v
+L0 2
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+!s108 1518769195.000000
+!s107 E:/STI/Project/ModelSim/test_ram/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/test_ram/tb.v|
+!s101 -O0
+!i113 1
+Z4 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vwr_rd
+R0
+!i10b 1
+!s100 8fn3P_Z;nd?ESN`SGH_Y`1
+IRXEJNP3[l6obI7QO^:h9L0
+R1
+R2
+w1518692715
+8E:/STI/Project/ModelSim/test_ram/wr_rd.v
+FE:/STI/Project/ModelSim/test_ram/wr_rd.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1518769196.000000
+!s107 E:/STI/Project/ModelSim/test_ram/wr_rd.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/test_ram/wr_rd.v|
+!s101 -O0
+!i113 1
+R4

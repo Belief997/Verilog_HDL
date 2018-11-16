@@ -1,0 +1,64 @@
+E:/STI/Project/ModelSim/Sine_generator/tb2.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/Sine_generator/tb2.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb2
+
+Top level modules:
+	tb2
+
+} {} {}} E:/STI/Project/ModelSim/Sine_generator/Sine_gen.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/Sine_generator/Sine_gen.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Sine_gen
+
+Top level modules:
+	Sine_gen
+
+} {} {}} E:/STI/Project/ModelSim/Sine_generator/AM_mod.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/Sine_generator/AM_mod.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module AM_mod
+
+Top level modules:
+	AM_mod
+
+} {} {}} E:/STI/Project/ModelSim/Sine_generator/fcor.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/Sine_generator/fcor.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fcor
+
+Top level modules:
+	fcor
+
+} {} {}} E:/STI/Project/ModelSim/Sine_generator/tb.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/Sine_generator/tb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} E:/STI/Project/ModelSim/Sine_generator/FM_mod.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/Sine_generator/FM_mod.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module FM_mod
+
+Top level modules:
+	FM_mod
+
+} {} {}} E:/STI/Project/ModelSim/Sine_generator/top.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/Sine_generator/top.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} E:/STI/Project/ModelSim/Sine_generator/LFSR.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/Sine_generator/LFSR.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module LFSR
+
+Top level modules:
+	LFSR
+
+} {} {}} E:/STI/Project/ModelSim/Sine_generator/dds.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/Sine_generator/dds.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dds
+
+Top level modules:
+	dds
+
+} {} {}}

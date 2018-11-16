@@ -1,0 +1,22 @@
+module range_mod (
+	input clk, rst,
+	input wire signed [11:0] m, //Q1.11   (-1,1)
+	input signed [7:0] in,//Q1.7
+	output reg signed [7:0] out //Q1.7
+);
+
+initial begin 
+	out = 8'b0;
+end
+
+always@(posedge clk) begin
+	if(rst)	out <= 8'b0;
+	else 
+	out <= (20'b1 * m * in) >>> 11;
+
+end
+
+
+
+
+endmodule 

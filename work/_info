@@ -1,0 +1,875 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dc:/users/public/modelsim/examples
+vAndGate
+Z0 !s110 1489765847
+!i10b 1
+!s100 `Wjc:djn0J<VO;91EB5N23
+In210<k2<1TZ7HnXZ6Lm`G1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dD:/STI/Project/ModelSim
+w1489765225
+8D:/STI/Project/ModelSim/AndGate.v
+FD:/STI/Project/ModelSim/AndGate.v
+L0 2
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1489765847.000000
+!s107 D:/STI/Project/ModelSim/AndGate.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/AndGate.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@and@gate
+vBcdToSeg
+Z6 !s110 1499934199
+!i10b 1
+!s100 maLoP4<]8:2bD?m18Kh:o3
+IGWLc?Tmz]WY<a?RWiYA[;0
+R1
+Z7 dE:/STI/Project/ModelSim
+Z8 w1499572722
+Z9 8E:/STI/Project/ModelSim/stopwatch.v
+Z10 FE:/STI/Project/ModelSim/stopwatch.v
+L0 173
+R3
+r1
+!s85 0
+31
+Z11 !s108 1499934199.000000
+Z12 !s107 E:/STI/Project/ModelSim/stopwatch.v|
+Z13 !s90 -reportprogress|300|-work|work|-vlog01compat|-stats=none|E:/STI/Project/ModelSim/stopwatch.v|
+!s101 -O0
+!i113 1
+Z14 o-work work -vlog01compat -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@bcd@to@seg
+vBinToBcd
+R6
+!i10b 1
+!s100 U`Bddd`JV[TmIRVMWeSh=2
+ImC`NG[0OR8[@jC;FclYjW2
+R1
+R7
+R8
+R9
+R10
+L0 152
+R3
+r1
+!s85 0
+31
+R11
+R12
+R13
+!s101 -O0
+!i113 1
+R14
+n@bin@to@bcd
+vcarry
+Z15 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+!s110 1492277768
+!i10b 1
+!s100 lmS@jK010NMmAXQzVjgR@3
+IH]:aXIH8b_:W<6<XNLY[90
+R1
+!s105 carry_sv_unit
+S1
+R2
+w1492274853
+8D:/STI/Project/ModelSim/carry.sv
+FD:/STI/Project/ModelSim/carry.sv
+L0 1
+R3
+r1
+!s85 0
+31
+Z16 !s108 1492277768.000000
+!s107 D:/STI/Project/ModelSim/carry.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/STI/Project/ModelSim/carry.sv|
+!s101 -O0
+!i113 1
+Z17 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vcounter
+Z18 !s110 1490892524
+!i10b 1
+!s100 @JJ>_31GPBj?4<P^I>LXZ1
+IPYl=T0=2^2iRPdnD4IV<X0
+R1
+R2
+w1490892467
+8D:/STI/Project/ModelSim/counter.v
+FD:/STI/Project/ModelSim/counter.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z19 !s108 1490892524.000000
+!s107 D:/STI/Project/ModelSim/counter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/counter.v|
+!s101 -O0
+!i113 1
+R5
+vcounterM
+!s110 1491630818
+!i10b 1
+!s100 fan2D8loH8_7`NRL^6<LF3
+Igz0`8I@P6@E8Pla19hm942
+R1
+R2
+w1491630817
+8D:/STI/Project/ModelSim/accumulator .v
+FD:/STI/Project/ModelSim/accumulator .v
+L0 1
+R3
+r1
+!s85 0
+31
+Z20 !s108 1491630818.000000
+!s107 D:/STI/Project/ModelSim/accumulator .v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/accumulator .v|
+!s101 -O0
+!i113 1
+R5
+ncounter@m
+vdds
+Z21 !s110 1500097687
+!i10b 1
+!s100 RGm4ETRP65iDk?Az]`ah[1
+Izb9zm>3TS;9dmgSRcUl@_1
+R1
+R7
+w1499970756
+8E:/STI/Project/ModelSim/dds_lw.v
+FE:/STI/Project/ModelSim/dds_lw.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z22 !s108 1500097687.000000
+!s107 E:/STI/Project/ModelSim/dds_lw.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/dds_lw.v|
+!s101 -O0
+!i113 1
+R5
+vdds_to_fb
+Z23 !s110 1499969395
+!i10b 1
+!s100 figOh[6ChlE1n3CIoaLIA0
+Ikj]0F3dFRWgRe1dW[aj0i2
+R1
+R7
+w1499969081
+8E:/STI/Project/ModelSim/dds_to_fb.v
+FE:/STI/Project/ModelSim/dds_to_fb.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z24 !s108 1499969395.000000
+!s107 E:/STI/Project/ModelSim/dds_to_fb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/dds_to_fb.v|
+!s101 -O0
+!i113 1
+R5
+vdelaychain
+Z25 !s110 1491571489
+!i10b 1
+!s100 X<co]O9iQ^5ODk5bU8W>g2
+IHjaKm6e;5LOA?2a[a`lbK1
+R1
+R2
+w1491571487
+8D:/STI/Project/ModelSim/yanchilian.v
+FD:/STI/Project/ModelSim/yanchilian.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z26 !s108 1491571489.000000
+!s107 D:/STI/Project/ModelSim/yanchilian.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/yanchilian.v|
+!s101 -O0
+!i113 1
+R5
+venc2_NtoN
+Z27 !s110 1490113446
+!i10b 1
+!s100 oOR?Q3>cg;;?:oDjBK2lj1
+Ik]6;DXY2_Y9o]=DdjcYFK2
+R1
+R2
+w1490113440
+8D:/STI/Project/ModelSim/Encoder_16_4.v
+FD:/STI/Project/ModelSim/Encoder_16_4.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1490113445.000000
+!s107 D:/STI/Project/ModelSim/Encoder_16_4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/Encoder_16_4.v|
+!s101 -O0
+!i113 1
+R5
+nenc2_@nto@n
+vfb
+!s110 1499572659
+!i10b 1
+!s100 QUPf=od_FI^[E`F0^^lYI0
+Id1]^9X`7aXAfIdd9l<K_?3
+R1
+R7
+w1499572385
+8E:/STI/Project/ModelSim/dds.v
+FE:/STI/Project/ModelSim/dds.v
+L0 22
+R3
+r1
+!s85 0
+31
+!s108 1499572659.000000
+!s107 E:/STI/Project/ModelSim/dds.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/dds.v|
+!s101 -O0
+!i113 1
+R5
+vfb_test
+Z28 !s110 1499958320
+!i10b 1
+!s100 j1C3[3YN_z7OPNhBn0cSF1
+I>Y[e0halAm=^fT;Cj3j?92
+R1
+R7
+w1499958318
+8E:/STI/Project/ModelSim/test_fb.v
+FE:/STI/Project/ModelSim/test_fb.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z29 !s108 1499958320.000000
+!s107 E:/STI/Project/ModelSim/test_fb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/test_fb.v|
+!s101 -O0
+!i113 1
+R5
+vJK_FF
+!s110 1490885433
+!i10b 1
+!s100 g@Gibm[DJ;omIJX3K^Tml2
+IFO4J3[:5YTHlQ[lBIdfnP3
+R1
+R2
+w1490883194
+Z30 8D:/STI/Project/ModelSim/J-K_FF.v
+Z31 FD:/STI/Project/ModelSim/J-K_FF.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1490885433.000000
+Z32 !s107 D:/STI/Project/ModelSim/J-K_FF.v|
+Z33 !s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/J-K_FF.v|
+!s101 -O0
+!i113 1
+R5
+n@j@k_@f@f
+vJK_FF1
+Z34 !s110 1490887312
+!i10b 1
+!s100 ^1ieaBoAQE1@S>8W_80KZ3
+IOGKLMmCHV2KPmjDCSHD:h2
+R1
+R2
+w1490886571
+R30
+R31
+L0 1
+R3
+r1
+!s85 0
+31
+Z35 !s108 1490887312.000000
+R32
+R33
+!s101 -O0
+!i113 1
+R5
+n@j@k_@f@f1
+vJK_FF2
+!s110 1490887313
+!i10b 1
+!s100 7gZbS45H@QU2F3;N]AaY32
+ID<ERT3R;VkIgfRTCj=cdX3
+R1
+R2
+w1490886573
+8D:/STI/Project/ModelSim/JK2.v
+FD:/STI/Project/ModelSim/JK2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R35
+!s107 D:/STI/Project/ModelSim/JK2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/JK2.v|
+!s101 -O0
+!i113 1
+R5
+n@j@k_@f@f2
+vkey
+R6
+!i10b 1
+!s100 @RLILZ3HCiTN_bK80VDnk1
+Ioh`W;D993jPDZ1;WO15H11
+R1
+R7
+R8
+R9
+R10
+L0 119
+R3
+r1
+!s85 0
+31
+R11
+R12
+R13
+!s101 -O0
+!i113 1
+R14
+vkeys
+R23
+!i10b 1
+!s100 ]k0mU=CfL[UX]GWL0n0]I3
+IhWeAf@nb]GH>69?Wnm2RW2
+R1
+R7
+w1499968067
+8E:/STI/Project/ModelSim/keys.v
+FE:/STI/Project/ModelSim/keys.v
+L0 1
+R3
+r1
+!s85 0
+31
+R24
+!s107 E:/STI/Project/ModelSim/keys.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/keys.v|
+!s101 -O0
+!i113 1
+R5
+vmodul
+R15
+Z36 !s110 1492277769
+!i10b 1
+!s100 m=7JS@E8iVEL>hTDh]5z]0
+ImEGALH8kKU^gMU0]^j;9F3
+R1
+!s105 modulation_sv_unit
+S1
+R2
+w1492275727
+8D:/STI/Project/ModelSim/modulation.sv
+FD:/STI/Project/ModelSim/modulation.sv
+L0 1
+R3
+r1
+!s85 0
+31
+R16
+!s107 D:/STI/Project/ModelSim/modulation.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/STI/Project/ModelSim/modulation.sv|
+!s101 -O0
+!i113 1
+R17
+vNotGate
+!s110 1489763876
+!i10b 1
+!s100 5HQFJOfafDmHEBU8XSR<_1
+Ie[48P^W<YCdP]<<XNO`_G0
+R1
+R2
+w1489759236
+8D:/STI/Project/ModelSim/OrGate.v
+FD:/STI/Project/ModelSim/OrGate.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1489763876.000000
+!s107 D:/STI/Project/ModelSim/OrGate.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/OrGate.v|
+!s101 -O0
+!i113 1
+R5
+n@not@gate
+vstopwatch
+R6
+!i10b 1
+!s100 :jRl=:hhc1bhdG];>VF<L2
+IQO:C_0TDSe@?`A6no@iMn3
+R1
+R7
+R8
+R9
+R10
+L0 2
+R3
+r1
+!s85 0
+31
+R11
+R12
+R13
+!s101 -O0
+!i113 1
+R14
+vT
+R15
+R36
+!i10b 1
+!s100 5_W1OFC04n>D4Vn_<6Z7_2
+IBP3^Sl=RUk6L`VTDAToPU0
+R1
+!s105 t_sv_unit
+S1
+R2
+w1492277529
+8D:/STI/Project/ModelSim/t.sv
+FD:/STI/Project/ModelSim/t.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1492277769.000000
+!s107 D:/STI/Project/ModelSim/t.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|D:/STI/Project/ModelSim/t.sv|
+!s101 -O0
+!i113 1
+R17
+n@t
+vtb_gate
+Z37 !s110 1499600747
+!i10b 1
+!s100 `W4JRZ=2ViJWhb0LnmoVF0
+Ib141@_fX=TZJA;g_ZPBoc0
+R1
+R7
+w1499571841
+8E:/STI/Project/ModelSim/test_gate.v
+FE:/STI/Project/ModelSim/test_gate.v
+L0 2
+R3
+r1
+!s85 0
+31
+Z38 !s108 1499600747.000000
+!s107 E:/STI/Project/ModelSim/test_gate.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/test_gate.v|
+!s101 -O0
+!i113 1
+R5
+vtb_re
+!s110 1499969396
+!i10b 1
+!s100 RWXo:Rg?;^5C14aK0NR4_2
+Ih]IdTOUz]@WA?9J2SYKP:2
+R1
+R7
+w1499969250
+8E:/STI/Project/ModelSim/re_tb.v
+FE:/STI/Project/ModelSim/re_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1499969396.000000
+!s107 E:/STI/Project/ModelSim/re_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/re_tb.v|
+!s101 -O0
+!i113 1
+R5
+vtb_sp
+R6
+!i10b 1
+!s100 Xm2jKV4`MLQ8e9Lf:6j7L2
+IMU7kjYJP1kj?APihdK_j53
+R1
+R7
+w1499534338
+8E:/STI/Project/ModelSim/tb_stopwatch.v
+FE:/STI/Project/ModelSim/tb_stopwatch.v
+L0 3
+R3
+r1
+!s85 0
+31
+R11
+!s107 E:/STI/Project/ModelSim/tb_stopwatch.v|
+!s90 -reportprogress|300|-work|work|-vlog01compat|-stats=none|E:/STI/Project/ModelSim/tb_stopwatch.v|
+!s101 -O0
+!i113 1
+R14
+vtb_test
+R28
+!i10b 1
+!s100 `@ZSUSc2S1CYXm4EQeR3i2
+IAm?cDA4;YcIN:Q;F_o=^=3
+R1
+R7
+w1499957730
+8E:/STI/Project/ModelSim/testbench_test.v
+FE:/STI/Project/ModelSim/testbench_test.v
+L0 2
+R3
+r1
+!s85 0
+31
+R29
+!s107 E:/STI/Project/ModelSim/testbench_test.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/testbench_test.v|
+!s101 -O0
+!i113 1
+R5
+vtest
+R37
+!i10b 1
+!s100 ocOHYAC9799in`jm5jX?S2
+IPV4GD;k09An4m5;IF:19`1
+R1
+R7
+w1499535231
+8E:/STI/Project/ModelSim/0001.v
+FE:/STI/Project/ModelSim/0001.v
+L0 1
+R3
+r1
+!s85 0
+31
+R38
+!s107 E:/STI/Project/ModelSim/0001.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/0001.v|
+!s101 -O0
+!i113 1
+R5
+vtestbench
+!s110 1499528669
+!i10b 1
+!s100 P`eY_iKOEI`@N]W[k2H[61
+IL=o0=`6GBE5ReAKASEG2D3
+R1
+R7
+w1499528667
+Z39 8E:/STI/Project/ModelSim/testbench.v
+Z40 FE:/STI/Project/ModelSim/testbench.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1499528669.000000
+Z41 !s107 E:/STI/Project/ModelSim/testbench.v|
+Z42 !s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/testbench.v|
+!s101 -O0
+!i113 1
+R5
+vtestbench_A
+R0
+!i10b 1
+!s100 fZ^Vmi_?Oll5c`61^M_HL2
+I^2CU6cO_oC1[Y07Z6?YU=1
+R1
+R2
+w1489765845
+8D:/STI/Project/ModelSim/testbench_A.v
+FD:/STI/Project/ModelSim/testbench_A.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/STI/Project/ModelSim/testbench_A.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/testbench_A.v|
+!s101 -O0
+!i113 1
+R5
+ntestbench_@a
+vtestbench_acc
+!s110 1491630819
+!i10b 1
+!s100 00:K7mbcU[fNNYgAnZZ@I1
+IzgJ`>33h8fPH:QN`im<Y[3
+R1
+R2
+w1491630723
+8D:/STI/Project/ModelSim/testbench_accu.v
+FD:/STI/Project/ModelSim/testbench_accu.v
+L0 2
+R3
+r1
+!s85 0
+31
+R20
+!s107 D:/STI/Project/ModelSim/testbench_accu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/testbench_accu.v|
+!s101 -O0
+!i113 1
+R5
+vtestbench_chain
+R25
+!i10b 1
+!s100 _PDMga9cnI:<JATfT5<Qm2
+Im>EXA1U;IH;m=[om4^le13
+R1
+R2
+w1491547218
+8D:/STI/Project/ModelSim/testbanch_yanchi.v
+FD:/STI/Project/ModelSim/testbanch_yanchi.v
+L0 2
+R3
+r1
+!s85 0
+31
+R26
+!s107 D:/STI/Project/ModelSim/testbanch_yanchi.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/testbanch_yanchi.v|
+!s101 -O0
+!i113 1
+R5
+vtestbench_counter
+R18
+!i10b 1
+!s100 OSfTl^=BBL;LJ_7ITi^Jb0
+IEF;fg;6o[08mWDD<75ONz0
+R1
+R2
+w1490892521
+8D:/STI/Project/ModelSim/testbench_counter.v
+FD:/STI/Project/ModelSim/testbench_counter.v
+L0 2
+R3
+r1
+!s85 0
+31
+R19
+!s107 D:/STI/Project/ModelSim/testbench_counter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/testbench_counter.v|
+!s101 -O0
+!i113 1
+R5
+vtestbench_dds
+R6
+!i10b 1
+!s100 MAQCNRNc?a8WlSY;i?PYm3
+If[cXYz@7_Bi4^VoFMg9Q?1
+R1
+R7
+w1499933329
+R39
+R40
+L0 3
+R3
+r1
+!s85 0
+31
+R11
+R41
+R42
+!s101 -O0
+!i113 1
+R5
+vtestbench_enc
+R27
+!i10b 1
+!s100 IzBCMFAnd>J7m?cakf?OA1
+Id=H_zIdDhVhWmC>Sh3I`E1
+R1
+R2
+w1490110624
+8D:/STI/Project/ModelSim/testbench_enc.v
+FD:/STI/Project/ModelSim/testbench_enc.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1490113446.000000
+!s107 D:/STI/Project/ModelSim/testbench_enc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/testbench_enc.v|
+!s101 -O0
+!i113 1
+R5
+vtestbench_JK
+R34
+!i10b 1
+!s100 bAPa5`LZgP>0kd6PAjj373
+IdFjnzF4hF;_jF2a@6WL4o3
+R1
+R2
+w1490886970
+8D:/STI/Project/ModelSim/testbench_J-K_FF.v
+FD:/STI/Project/ModelSim/testbench_J-K_FF.v
+L0 2
+R3
+r1
+!s85 0
+31
+R35
+!s107 D:/STI/Project/ModelSim/testbench_J-K_FF.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/testbench_J-K_FF.v|
+!s101 -O0
+!i113 1
+R5
+ntestbench_@j@k
+vtestbench_lw
+R21
+!i10b 1
+!s100 l[?T4CAj2Y>6]RFCQ;zOY1
+I[LYEO^mT7BkD>QDk2?:PQ1
+R1
+R7
+w1500097685
+8E:/STI/Project/ModelSim/tb_lw.v
+FE:/STI/Project/ModelSim/tb_lw.v
+L0 2
+R3
+r1
+!s85 0
+31
+R22
+!s107 E:/STI/Project/ModelSim/tb_lw.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/tb_lw.v|
+!s101 -O0
+!i113 1
+R5
+vtestbench_XNOR
+Z43 !s110 1489767547
+!i10b 1
+!s100 X6Yc2iJafe95Gg5bI9P_?0
+I0V]8ZGT>ScZH1^1IPQO:;1
+R1
+R2
+w1489767545
+8D:/STI/Project/ModelSim/testbench_XNOR.v
+FD:/STI/Project/ModelSim/testbench_XNOR.v
+L0 2
+R3
+r1
+!s85 0
+31
+Z44 !s108 1489767547.000000
+!s107 D:/STI/Project/ModelSim/testbench_XNOR.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/testbench_XNOR.v|
+!s101 -O0
+!i113 1
+R5
+ntestbench_@x@n@o@r
+vtestbench_XOR
+Z45 !s110 1489768505
+!i10b 1
+!s100 Qc8PK_GO0U`57<=lL]VoL0
+I8eHm>JF2F4mGmnlBB2`652
+R1
+R2
+w1489768278
+8D:/STI/Project/ModelSim/testbench_XOR.v
+FD:/STI/Project/ModelSim/testbench_XOR.v
+L0 2
+R3
+r1
+!s85 0
+31
+Z46 !s108 1489768505.000000
+!s107 D:/STI/Project/ModelSim/testbench_XOR.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/testbench_XOR.v|
+!s101 -O0
+!i113 1
+R5
+ntestbench_@x@o@r
+vtop
+R23
+!i10b 1
+!s100 2PzEP:iBX1Rk[e^2?NV=Y3
+IC;NN:CJB?fJWR;H1nIK_d3
+R1
+R7
+w1499967304
+8E:/STI/Project/ModelSim/top.v
+FE:/STI/Project/ModelSim/top.v
+L0 1
+R3
+r1
+!s85 0
+31
+R24
+!s107 E:/STI/Project/ModelSim/top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/top.v|
+!s101 -O0
+!i113 1
+R5
+vXnorGate
+R43
+!i10b 1
+!s100 6<T0CZ7AX4hn@NEggNiz51
+IkWLO>icIZ05NYjL5Iz;2N1
+R1
+R2
+w1489767303
+8D:/STI/Project/ModelSim/XnorGate.v
+FD:/STI/Project/ModelSim/XnorGate.v
+L0 2
+R3
+r1
+!s85 0
+31
+R44
+!s107 D:/STI/Project/ModelSim/XnorGate.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/XnorGate.v|
+!s101 -O0
+!i113 1
+R5
+n@xnor@gate
+vXorGate
+R45
+!i10b 1
+!s100 LT]<`lV6]<REYOJHi67FO1
+I_3S[<nGb]H[NKU=NGRo:V0
+R1
+R2
+w1489768502
+8D:/STI/Project/ModelSim/XorGate.v
+FD:/STI/Project/ModelSim/XorGate.v
+L0 2
+R3
+r1
+!s85 0
+31
+R46
+!s107 D:/STI/Project/ModelSim/XorGate.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/STI/Project/ModelSim/XorGate.v|
+!s101 -O0
+!i113 1
+R5
+n@xor@gate

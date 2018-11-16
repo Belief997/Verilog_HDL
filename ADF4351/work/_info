@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/STI/Project/ModelSim/sofmax
+vadf4351
+Z0 !s110 1530852270
+!i10b 1
+!s100 4FYG4o4XY3Nki=mSgmK9m1
+In76I9>:6`mQ4TVhH3[CDh2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/STI/Project/ModelSim/ADF4351
+w1530799918
+8E:/STI/Project/ModelSim/ADF4351/Driver_PLL.v
+FE:/STI/Project/ModelSim/ADF4351/Driver_PLL.v
+L0 3
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1530852270.000000
+!s107 E:/STI/Project/ModelSim/ADF4351/Driver_PLL.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/ADF4351/Driver_PLL.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vkey
+R0
+!i10b 1
+!s100 FgkDzH4Q05H;6]?B@PKc_2
+IH6==a_Z:Sb2X5YlRb0^j>2
+R1
+R2
+w1530852260
+8E:/STI/Project/ModelSim/ADF4351/key.v
+FE:/STI/Project/ModelSim/ADF4351/key.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/ADF4351/key.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/ADF4351/key.v|
+!s101 -O0
+!i113 1
+R5
+vtb
+R0
+!i10b 1
+!s100 3M_9AgdRG2l=PN[HEDJ161
+I[0^=4=9gnF[?TZoYzHYCN3
+R1
+R2
+w1530852204
+8E:/STI/Project/ModelSim/ADF4351/tb.v
+FE:/STI/Project/ModelSim/ADF4351/tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/ADF4351/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/ADF4351/tb.v|
+!s101 -O0
+!i113 1
+R5
+vtop
+R0
+!i10b 1
+!s100 nZaCVkVJ0NO_WnMRYiYe:3
+IDA<[TGUG<D[M?5BYGbzMo0
+R1
+R2
+w1530851701
+8E:/STI/Project/ModelSim/ADF4351/top.v
+FE:/STI/Project/ModelSim/ADF4351/top.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/ADF4351/top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/ADF4351/top.v|
+!s101 -O0
+!i113 1
+R5

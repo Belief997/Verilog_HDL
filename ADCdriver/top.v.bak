@@ -1,0 +1,22 @@
+
+module top(
+	input clk, nrst,
+	output CS, SCLK,
+	input SDO,
+	output  [15:0] data
+);
+
+
+
+ adc_driver the_ads7883(
+	.clk, .nrst,//low active
+	.CS, .SCLK,
+	.SDO,
+	.data
+
+);
+
+
+
+
+endmodule 

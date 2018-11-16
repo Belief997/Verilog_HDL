@@ -1,0 +1,224 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/STI/Project/ModelSim/ADDA_FIR
+vAM_mod
+Z0 !s110 1528376168
+!i10b 1
+!s100 DgcCbhmLZ?TmfbQWX=6X81
+I:Yl`fUQ>_P:I81;`TGTT70
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/STI/Project/ModelSim/Sine_generator
+w1528095698
+Z3 8E:/STI/Project/ModelSim/Sine_generator/AM_mod.v
+Z4 FE:/STI/Project/ModelSim/Sine_generator/AM_mod.v
+L0 4
+Z5 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z6 !s108 1528376168.000000
+Z7 !s107 E:/STI/Project/ModelSim/Sine_generator/AM_mod.v|
+Z8 !s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Sine_generator/AM_mod.v|
+!s101 -O0
+!i113 1
+Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@a@m_mod
+vdds
+Z10 !s110 1528376167
+!i10b 1
+!s100 o@??UM2[3jSOGNM[d9`C^2
+IGb7ak<jR_3@dNkW^X_B613
+R1
+R2
+w1526633364
+8E:/STI/Project/ModelSim/Sine_generator/dds.v
+FE:/STI/Project/ModelSim/Sine_generator/dds.v
+L0 3
+R5
+r1
+!s85 0
+31
+Z11 !s108 1528376167.000000
+!s107 E:/STI/Project/ModelSim/Sine_generator/dds.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Sine_generator/dds.v|
+!s101 -O0
+!i113 1
+R9
+vfcor
+!s110 1528376169
+!i10b 1
+!s100 L_EWBm4^A^o]j<zA:oF[c0
+I3XJLW;jHOc;_hC0keK@F@3
+R1
+R2
+w1527425103
+8E:/STI/Project/ModelSim/Sine_generator/fcor.v
+FE:/STI/Project/ModelSim/Sine_generator/fcor.v
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+!s107 E:/STI/Project/ModelSim/Sine_generator/fcor.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Sine_generator/fcor.v|
+!s101 -O0
+!i113 1
+R9
+vFM_mod
+R0
+!i10b 1
+!s100 m^lcJE]OE5HXHhfz1k9l>2
+IQ_^Eng_[jjNC3oiJb:MUe2
+R1
+R2
+w1526634143
+8E:/STI/Project/ModelSim/Sine_generator/FM_mod.v
+FE:/STI/Project/ModelSim/Sine_generator/FM_mod.v
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+!s107 E:/STI/Project/ModelSim/Sine_generator/FM_mod.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Sine_generator/FM_mod.v|
+!s101 -O0
+!i113 1
+R9
+n@f@m_mod
+vLFSR
+R10
+!i10b 1
+!s100 KD:W6kAl:7V[hnU4K?l0H2
+I<=`^MfKeE5UdM0IRAFP[o3
+R1
+R2
+w1526542529
+8E:/STI/Project/ModelSim/Sine_generator/LFSR.v
+FE:/STI/Project/ModelSim/Sine_generator/LFSR.v
+L0 22
+R5
+r1
+!s85 0
+31
+R11
+!s107 E:/STI/Project/ModelSim/Sine_generator/LFSR.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Sine_generator/LFSR.v|
+!s101 -O0
+!i113 1
+R9
+n@l@f@s@r
+vmod
+!s110 1526570847
+!i10b 1
+!s100 l5>?8c<1eRURbYTYW6]L83
+IX5K6S;E]MY85n?@Y07RCQ3
+R1
+R2
+w1526550347
+R3
+R4
+L0 2
+R5
+r1
+!s85 0
+31
+!s108 1526570847.000000
+R7
+R8
+!s101 -O0
+!i113 1
+R9
+vSine_gen
+R0
+!i10b 1
+!s100 cA3<hTh3fk]=Ec8ih=7<Y2
+IbXVeB_0[38h9<]Ra5R6NY1
+R1
+R2
+w1526819200
+8E:/STI/Project/ModelSim/Sine_generator/Sine_gen.v
+FE:/STI/Project/ModelSim/Sine_generator/Sine_gen.v
+L0 3
+R5
+r1
+!s85 0
+31
+R6
+!s107 E:/STI/Project/ModelSim/Sine_generator/Sine_gen.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Sine_generator/Sine_gen.v|
+!s101 -O0
+!i113 1
+R9
+n@sine_gen
+vtb
+R10
+!i10b 1
+!s100 5aH1g0PfUA?;`DdiI?6_L1
+IWz;3e0z@JcYA`@?jDNJGj3
+R1
+R2
+w1526819377
+8E:/STI/Project/ModelSim/Sine_generator/tb.v
+FE:/STI/Project/ModelSim/Sine_generator/tb.v
+L0 2
+R5
+r1
+!s85 0
+31
+R11
+!s107 E:/STI/Project/ModelSim/Sine_generator/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Sine_generator/tb.v|
+!s101 -O0
+!i113 1
+R9
+vtb2
+R0
+!i10b 1
+!s100 oSh>zjXJR5l?b@Sh4?GMJ0
+IVRa5:`1UfI::L9cXGj=W;1
+R1
+R2
+w1527424960
+8E:/STI/Project/ModelSim/Sine_generator/tb2.v
+FE:/STI/Project/ModelSim/Sine_generator/tb2.v
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+!s107 E:/STI/Project/ModelSim/Sine_generator/tb2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Sine_generator/tb2.v|
+!s101 -O0
+!i113 1
+R9
+vtop
+R10
+!i10b 1
+!s100 4aEdFM[dDoPmAU1NGkfhB0
+IUWFHf@iAA1lg3]ekhe^<R2
+R1
+R2
+w1526791924
+8E:/STI/Project/ModelSim/Sine_generator/top.v
+FE:/STI/Project/ModelSim/Sine_generator/top.v
+L0 2
+R5
+r1
+!s85 0
+31
+R11
+!s107 E:/STI/Project/ModelSim/Sine_generator/top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Sine_generator/top.v|
+!s101 -O0
+!i113 1
+R9

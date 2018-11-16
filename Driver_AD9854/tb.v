@@ -1,0 +1,141 @@
+//`timescale 1ns/1ps
+//module tb;
+//reg clk;initial clk = 'b0;
+//always #5 clk <= ~clk;
+//
+//
+//
+//
+//
+//reg [47:0] FreqWord;
+//initial begin
+//	FreqWord = 48'haa_55_aa_55_aa_55;
+//end
+//
+//wire MRST, WR, RD, UDCLK, key0, key1;
+//wire [5:0] A;
+//wire [7:0] D;
+//wire [1:0] flag;
+//
+//top the_top(
+//	.clk(clk),
+//	.MRST(MRST), .WR(WR), .RD(RD),
+//	.A(A),
+//	.D(D), 
+// 	.FBH(FBH), .OSK(OSK),
+//	.UDCLK(UDCLK),
+//	.flag(flag),
+//	.key0(key0) , .key1()
+//);
+//
+//
+//
+//
+////top the_top(
+////	.clk(clk),
+////	.MRST(MRST), .WR(WR), .RD(RD),
+////	.A(A),
+////	.D(D) 
+////
+////);
+//
+//
+//
+////AD9854 the_AD9854(
+////	.clk(clk), .rst_n(1'b1),
+////	.FreqWord(FreqWord),
+////	.MRST(MRST), .WR(WR), .RD(RD),
+////	.A(A),
+////	.D(D) 
+////
+////);
+//
+//endmodule 
+
+
+
+`timescale 1ns / 1ps
+
+
+
+module tb;
+reg clk;initial clk = 'b0;
+always #5 clk <= ~clk;
+
+
+
+
+
+//reg [47:0] FreqWord;
+//initial begin
+//	FreqWord = 48'haa_55_aa_55_aa_55;
+//end
+
+wire MRST, WR, RD;
+wire [5:0] A;
+wire [7:0] D;
+wire [1:0] flag;
+//wire key0=0;
+ wire UDCLK, FBH, OSK;
+reg key0 ;initial begin key0 = 'b0; #2000 key0 = 'b1; #600 key0 = 'b0; end
+//reg mod; initial begin mod = 'b0; #1000 mod = 'b1;  end
+wire mod;
+reg rst_in;initial begin rst_in = 'b0; #2030 rst_in = 'b1; end
+reg add_in; initial begin add_in = 'b0; #4100 add_in = 'b1;#1100 add_in = 'b0; end
+
+wire[47:0] Freq = 48'd1_407_374_883_553;
+wire [47:0] SFreq = Freq << 1;
+wire [31:0] Freq_0 = Freq[31:0];
+wire [31:0] Freq_1 = 32'b1* Freq[47:32];
+wire [31:0] Freq_L_0 = SFreq[31:0];
+wire [31:0] Freq_L_1 = 32'b1* SFreq[47:32];
+wire [31:0] dFreq_0 = Freq[31:0];
+wire [31:0] dFreq_1 = 32'b1* Freq[47:32];
+
+top_T the_top(
+	.clk(clk),
+	.MRST(MRST), .WR(WR), .RD(RD), .FBH(FBH), .OSK(OSK), .UDCLK(UDCLK),
+	.A(A),
+	.D(D) ,
+//	.flag(flag),
+//    .key0(key0) ,//.key1(key1)
+	.mod(mod),
+    .key0(key0) /*, key1*/, .rst_in(rst_in ), .add_in(add_in ),
+     .Freq_0( Freq_0), .Freq_1(Freq_1 ), .Freq_L_0(Freq_L_0 ), .Freq_L_1(Freq_L_1 ), .dFreq_0( dFreq_0), .dFreq_1( dFreq_1)
+);
+
+
+//top the_top(
+//	.clk(clk),
+//	.MRST(MRST), .WR(WR), .RD(RD), .FBH(FBH), .OSK(OSK), .UDCLK(UDCLK),
+//	.A(A),
+//	.D(D) ,
+//	.flag(flag),
+//    .key0(key0) , .key1(key1)
+
+//);
+
+
+
+//AD9854 the_AD9854(
+//	.clk(clk), .rst_n(1'b1),
+//	.FreqWord(FreqWord),
+//	.MRST(MRST), .WR(WR), .RD(RD),
+//	.A(A),
+//	.D(D) 
+//
+//);
+
+endmodule 
+///////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,105 @@
+`timescale 1ns/1ps
+module FP_Test(  
+);  
+  
+reg clk,rst_n;  
+reg [31:0] mdat1,mdat2;  
+wire [31:0] odat;  
+wire [31:0] odat2;  
+  
+initial begin  
+    clk<=1'b1;  
+    rst_n<=1'b1;  
+    mdat1<=0;  
+    mdat2<=0;  
+    #2;  
+    rst_n<=1'b0;  
+    #2;  
+    rst_n<=1'b1;  
+    #4;  
+    mdat1<=32'h3fc30f28; //1.5239  
+    mdat2<=32'h3fc30f28;  
+    #2;  
+    mdat1<=32'h40a7a9fc; //5.2395  
+    mdat2<=32'h40a7a9fc;  
+    #2;  
+    mdat1<=32'h4251954d; //52.3958  
+    mdat2<=32'h4251954d;  
+    #2;  
+    mdat1<=32'h4402fd52; //523.9581  
+    mdat2<=32'h4402fd52;  
+    #2;  
+    mdat1<=32'h4251954d; //52.3958  
+    mdat2<=32'h4402fd52; //523.9581  
+    #2;  
+    mdat1<=32'h3f07929f; //0.529581  
+    mdat2<=32'h3f07929f;  
+    #2;  
+    mdat1<=32'hbf07929f; //-0.529581  
+    mdat2<=32'h4402fd52; //523.9581  
+    #2;  
+    mdat1<=32'h4380650b; //256.7894  
+    mdat2<=32'h4380650b;   
+    #2;  
+    mdat1<=32'h3da1ab4b; //0.07894  
+    mdat2<=32'h3da1ab4b;   
+    #2;  
+    mdat1<=32'h3da1ab4b; //0.07894  
+    mdat2<=32'h3f07929f; //0.529581  
+    #2;  
+    mdat1<=32'h3da1ab4b; //0.07894  
+    mdat2<=32'h0; //0.529581  
+    #2;  
+    mdat1<=32'h3bbab9a5; //0.0056984  
+    mdat2<=32'h3bbab9a5; //0.0056984  
+    #2;  
+    mdat1<=32'h3bbab9a5; //0.0056984  
+    mdat2<=32'h3da1ab4b; //0.07894  
+  
+    #4;  
+      
+end  
+//always begin   
+//    #2;  
+//    $display("sf:%x,alt:%x",odat,odat2);  
+//end  
+  
+always begin   
+    #5;  
+    clk<=~clk;  
+end  
+  
+// wire /*signed*/ [7:0] test = 8'b1000_0001;//-127;
+
+
+wire [28:0] m;
+wire [4:0] j;
+wire [17:0] r;
+get_jmr the_jmr(
+	.clk(clk), .rst_n(),
+	.x(32'h42CC9999),//102.3(h42CC9999)
+	.m(m),
+	.j(j),
+	.r(r)
+);
+
+
+
+ 
+//fpmul mul0(  
+//    .mdat1(mdat1),  
+//    .mdat2(mdat2),  
+//    .odat(odat),  
+//    .clk(clk),  
+//    .rst_n(rst_n)  
+//  
+//);  
+//alt_fpmul mul1(  
+//    .aclr(~rst_n),  
+//    .clock(clk),  
+//    .dataa(mdat1),  
+//    .datab(mdat2),  
+//    .result(odat2),  
+//    .zero());  
+  
+endmodule 

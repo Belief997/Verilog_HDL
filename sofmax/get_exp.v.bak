@@ -1,0 +1,72 @@
+
+module get_exp#(
+	parameter J_TABLE = "j.dat",
+	parameter J_AW = 6,
+	parameter R_TABLE = "r.dat",
+	parameter R_AW = 7
+)(
+	input clk, rst_n,
+	input [31:0] x,
+	output [31:0] y
+);
+	wire [28:0] m;
+	wire [4:0] j;
+	wire [17:0] r;
+	wire [5:0] jaddr = {x[31], j};
+	wire [6:0] raddr = {x[31], r[13:8]};
+	reg [31:0] j_data, r_data;
+	wire [31:0] y_temp;
+
+   	reg signed [30 : 0] jTable[ 0 : 2 ** J_AW - 1]; // Sine table ROM
+   	reg signed [30 : 0] rTable[ 0 : 2 ** R_AW - 1]; // Sine table ROM
+initial begin
+   	   $readmemh(J_TABLE, jTable); // Initialize the ROM
+   	   $readmemh(R_TABLE, rTable); // Initialize the ROM
+end
+
+	always@(posedge clk)begin
+		j_data <= jTable[jaddr];
+		r_data <= rTable[raddr];
+		
+	end
+
+//wire [7:0] add = y_temp[30:23] + m;
+reg [7:0] add; 
+always@(posedge clk)begin
+	if(x[31]) add <= y_temp[30:23] - m;
+	else add <= y_temp[30:23] + m;
+end
+
+assign y = {1'b0, add, y_temp[22:0]};
+
+
+fpmul mul_mj(  
+    .mdat1(j_data),  
+    .mdat2(r_data),  
+    .odat(y_temp),  
+    .clk(clk),  
+    .rst_n(1'b1)  
+  
+);  
+
+
+//get_jmr the_jmr(
+//	.clk(clk), .rst_n(),
+//	.x(x),//102.3(h42CC9999)
+//	.m(m),
+//	.j(j),
+//	.r(r)
+//);
+
+
+get_jmr_dp(
+	.clk(clk), .rst_n(1'b1),
+	.x(16'sd10),
+	.x_shift(0),
+	.m(m),
+	.j(j),
+	.r(r)
+	
+);
+
+endmodule 

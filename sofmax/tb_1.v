@@ -1,0 +1,40 @@
+`timescale 1ns/1ps
+module tb_1;
+reg clk;
+initial clk = 'b0;
+always #5 clk = ~clk;
+
+
+
+
+reg signed [15:0] x;
+wire [15:0] x_shift;
+wire [45:0] y;
+
+initial begin
+ x <= -16'sd1<<<3; //x = Q(16-x_shift).x_shift
+ #200 x<= -16'sd2 <<<3;
+end
+
+assign x_shift = 16'b3;
+
+
+reg rst_n;
+initial begin
+	rst_n = 'b1;
+	#21 rst_n = 'b0;
+	#10 rst_n = 'b1;
+
+end
+
+
+
+get_exp_shift the_exp_shift(
+	.clk(clk), .rst_n(1'b1),
+	.x(x), .x_shift(x_shift),
+	.y(y)  //Q23.23
+
+);
+
+
+endmodule 

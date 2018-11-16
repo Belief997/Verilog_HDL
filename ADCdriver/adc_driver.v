@@ -1,0 +1,114 @@
+//dac driver for ads7883 test    - 12bit 3MSPS   
+//33.3M SCLK 100M clk
+//970ns 1.03MSPS 
+//unsigned output data
+module adc_driver(
+	input clk, nrst,//low active
+	output reg CS, SCLK,
+	input SDO,
+	output reg [15:0] data
+
+);
+	reg [15:0] shift_reg;//16 bit or 14 bit
+	reg [3:0] p_count;
+	reg [2:0] wait_count;
+	reg [6:0] sample_count, last_clkcnt, last_datacnt;
+
+	reg[2:0] cstate, nstate;
+
+	parameter IDLE = 3'b001;
+	parameter WAIT = 3'b010;
+	parameter SAMPLE = 3'b100;
+
+initial begin 
+	p_count = 4'b0; wait_count = 3'b0; sample_count = 7'b0; data = 16'b0;
+	last_clkcnt = 7'b0;last_datacnt = 7'b0; cstate = IDLE; shift_reg = 'b0; end
+
+always@(posedge clk or negedge nrst) begin
+	if(!nrst) 	cstate <= IDLE;
+	else cstate <= nstate;
+end
+
+always@(posedge clk or negedge nrst) begin
+	if(!nrst)	p_count <= 4'b0;
+	else p_count <= p_count + 4'b1;
+end
+
+always@( posedge clk or negedge nrst) begin
+	if(!nrst) 	wait_count <= 3'b0;
+	else if((cstate == WAIT)&& (wait_count < 3'd1))//|| nstate == WAIT)
+	wait_count <= wait_count + 1'b1;
+	else wait_count <= 3'b0;
+end
+
+always@( posedge clk or negedge nrst) begin
+	if(!nrst) 	sample_count <= 7'b0;
+	else if((cstate == SAMPLE)&& (sample_count < 7'd94))// || nstate == WAIT)
+	sample_count <= sample_count + 1'b1;
+	else sample_count <= 7'b0;
+end
+
+always@(*) begin
+	nstate = IDLE;
+	case(cstate)
+		IDLE:begin
+			if(p_count == 4'd15)	nstate <= WAIT;
+			else nstate <= IDLE;
+		end
+		WAIT:begin
+			if(wait_count == 3'd1)	nstate <= SAMPLE;
+			else nstate <= WAIT;	
+		end
+		SAMPLE:begin
+			if(sample_count == 7'd94) nstate <= WAIT;
+			else nstate <= SAMPLE;
+		end
+		default:begin
+			nstate <= IDLE;
+		end
+	endcase
+end
+
+always@(posedge clk or negedge nrst) begin 
+	if(!nrst) begin
+		CS <= 1'b1;
+		SCLK <= 1'b1;
+		shift_reg <= 'b0;
+	end
+	else begin
+	case(cstate)
+		IDLE:begin
+			CS <= 1'b1;
+			SCLK <= 1'b1;
+			shift_reg <= 'b0;
+		end
+		WAIT:begin
+			CS <= 1'b1;
+			SCLK <= 1'b1;
+			shift_reg <= 'b0;
+			last_clkcnt <= 6'b0;
+			last_datacnt <= 6'b0;
+		end
+		SAMPLE:begin
+			CS <= 1'b0;	
+			if((sample_count - last_clkcnt == 2'd3)||(sample_count== 1)) begin
+				SCLK = ~SCLK;
+				last_clkcnt <= sample_count;
+				if((sample_count > 7'd12)&&(!SCLK)&&(sample_count < 7'd81))begin
+					shift_reg <={shift_reg[14:0],SDO};
+				end
+			end
+			if(sample_count > 7'd81)	data <= shift_reg;	
+		end
+		default:begin
+			CS <=1'b1;
+			SCLK <= 1'b1;
+			shift_reg <= 'b0;
+			data <= 16'b0;
+			last_clkcnt <= 6'b0;
+			last_datacnt <= 6'b0;
+		end
+	endcase
+	end
+end
+endmodule 

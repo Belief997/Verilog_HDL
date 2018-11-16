@@ -1,0 +1,18 @@
+E:/STI/Project/ModelSim/test_ram/tb.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/test_ram/tb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} E:/STI/Project/ModelSim/test_ram/wr_rd.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/test_ram/wr_rd.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module wr_rd
+
+Top level modules:
+	wr_rd
+
+} {} {}} E:/STI/Project/ModelSim/test_ram/top.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/test_ram/top.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+
+} {} {}}

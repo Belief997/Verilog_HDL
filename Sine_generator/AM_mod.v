@@ -1,0 +1,32 @@
+//y(t) = c(t) * (m * x(t) + 1)
+//m = (A-B)/(A+B)   A=TOP B=DOWN
+// m(index) rang 0~1  0%~100%
+module AM_mod#(parameter CW = 8, parameter XW = 8, parameter MW = 16, parameter MN = 15)
+(
+	input clk, rst_n,
+	input signed [CW-1:0] c,	// Q1.7 Q1.(CW-1)
+	input signed [XW-1:0] x,	// Q1.7 Q1.(CW-1)
+	input [MW-1:0] m,			// Q1.15 Q1.MN
+	output reg signed [CW-1:0] sig // Q2.6 Q2.(CW-2)
+);
+	reg signed [XW-1:0] mx;	// Q1.7, (-1,1)  Q1.(CW-1),(-1,1)
+	initial begin
+		mx = 'sd0;
+		sig = 'sd0;
+	end
+	wire signed [MW:0] sm = m;	// Q2.15 Q(MW+1-MN).MN
+	//               1.7   2.15  1.7
+	//wire signed [7:0] mx = (17'sd1 * sm * x) >>> 15;
+	always@(posedge clk) begin
+		if(~rst_n)
+			mx <= 'sd0;
+		else
+			mx <= (32'sd1 * sm * x) >>> MN;
+	end
+	//            Q2.7(0,2)   Q1.7(-1,1)  Q2.7(1/2)
+	wire signed [XW:0] mx_shift = mx + (32'sd1 <<< (XW-(m!=0)));
+	always@(posedge clk) begin
+	// Q2.6(-2,2)      Q2.7(0,2)   Q1.7(-1,1)
+		sig <= (32'sd1 * mx_shift   *   c) >>> XW;
+	end
+endmodule

@@ -1,0 +1,70 @@
+module PWM( 
+	input clk, rst, 
+	input signed [7:0] data,in, 
+	output pwm
+);
+   	reg [7:0] cnt;
+ 
+initial cnt = 8'b0;
+   
+always@(posedge clk) begin
+      if(rst) cnt <= 8'b0;
+      else cnt <= cnt + 8'd1;
+   end
+
+   	assign pwm = (data > cnt);
+
+endmodule
+
+
+
+//module PWM( 
+//	input clk, rst, 
+//	input signed [7:0] data,
+//   	output pwmp, pwmn
+//);
+//   	reg signed [7:0] cnt;
+// 
+//initial cnt = 8'sb0;
+//   
+//always@(posedge clk) begin
+//      if(rst) cnt <= 8'sb0;
+//      else cnt <= cnt + 8'sb1;
+//   end
+//   
+//assign pwmp = (data > cnt);
+//assign pwmn = (-data > cnt);
+//
+//endmodule
+//
+//module Deadtime(
+//	input clk, 
+//	input in, 
+//	output out
+//);
+//   reg [3:0] cnt; 
+//
+//initial cnt = 4'b0;
+//
+//always@(posedge clk) begin
+//      if(in) begin
+//         if(cnt < 4'd10)
+//            cnt <= cnt + 4'b1;
+//      end
+//      else cnt <= 4'b0;
+//   end
+//   
+//assign out = (cnt == 4'd10);
+//
+////PWM the_pwm(clk, 1'b0, data, pwmp, pwmn);
+////wire pup, plo, nup, nlo;
+////Deadtime pos_up_dt(clk, pwmp, pup);
+////Deadtime pos_lo_dt(clk, ~pwmp, plo);
+////Deadtime neg_up_dt(clk, pwmn, nup);
+////Deadtime neg_lo_dt(clk, ~pwmn, nlo);
+////
+//
+//endmodule
+//
+
+

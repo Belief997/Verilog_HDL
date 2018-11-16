@@ -1,0 +1,204 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/STI/Project/ModelSim/ADF4351
+vAD9854
+Z0 !s110 1531233702
+!i10b 1
+!s100 bCR7ENbBGPYYUk0akd7iM2
+IDl:IFmQLEXMcZ4Vc<M67c2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/STI/Project/ModelSim/Driver_AD9854
+Z3 w1531132626
+Z4 8E:/STI/Project/ModelSim/Driver_AD9854/AD9854.v
+Z5 FE:/STI/Project/ModelSim/Driver_AD9854/AD9854.v
+L0 158
+Z6 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z7 !s108 1531233702.000000
+Z8 !s107 E:/STI/Project/ModelSim/Driver_AD9854/AD9854.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Driver_AD9854/AD9854.v|
+!s101 -O0
+!i113 1
+Z10 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@a@d9854
+vAD9854_0
+R0
+!i10b 1
+!s100 ?h3VCFK@e7SZ3JdRE57<70
+IPE]ha?J8]bS3JU>ZQ9GA?3
+R1
+R2
+R3
+R4
+R5
+L0 4
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+n@a@d9854_0
+vAD9854_t
+R0
+!i10b 1
+!s100 mo31YIoI^z2^imF]V04fY2
+Ia<818DdmE0aFlnI7GjMdC0
+R1
+R2
+w1531231679
+8E:/STI/Project/ModelSim/Driver_AD9854/AD9854_test.v
+FE:/STI/Project/ModelSim/Driver_AD9854/AD9854_test.v
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+!s107 E:/STI/Project/ModelSim/Driver_AD9854/AD9854_test.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Driver_AD9854/AD9854_test.v|
+!s101 -O0
+!i113 1
+R10
+n@a@d9854_t
+vkeys
+R0
+!i10b 1
+!s100 lem`P_1VO34:_AIeT1PB^0
+IaBAPN_[:7hPZD>Hg3Ak[g1
+R1
+R2
+w1531233414
+8E:/STI/Project/ModelSim/ADF4351/key.v
+FE:/STI/Project/ModelSim/ADF4351/key.v
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+!s107 E:/STI/Project/ModelSim/ADF4351/key.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/ADF4351/key.v|
+!s101 -O0
+!i113 1
+R10
+vmyDDS
+R0
+!i10b 1
+!s100 WQgh4PZ2>_T_H2h:@j8?h1
+IWMe;=HM]3l[Fk@ml0VX4;1
+R1
+R2
+Z11 w1531231723
+Z12 8E:/STI/Project/ModelSim/Driver_AD9854/top_test.v
+Z13 FE:/STI/Project/ModelSim/Driver_AD9854/top_test.v
+L0 122
+R6
+r1
+!s85 0
+31
+R7
+Z14 !s107 E:/STI/Project/ModelSim/Driver_AD9854/top_test.v|
+Z15 !s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Driver_AD9854/top_test.v|
+!s101 -O0
+!i113 1
+R10
+nmy@d@d@s
+vtb
+Z16 !s110 1531233701
+!i10b 1
+!s100 nMHFzTkAVcUJQ>mMOR>5H0
+IDS<]icDJlnU;`5VDni:PA2
+R1
+R2
+w1531233700
+8E:/STI/Project/ModelSim/Driver_AD9854/tb.v
+FE:/STI/Project/ModelSim/Driver_AD9854/tb.v
+L0 61
+R6
+r1
+!s85 0
+31
+Z17 !s108 1531233701.000000
+!s107 E:/STI/Project/ModelSim/Driver_AD9854/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Driver_AD9854/tb.v|
+!s101 -O0
+!i113 1
+R10
+vtop
+R0
+!i10b 1
+!s100 QIFj7zh3zVnALd<UgYI9R1
+IbGZ9Hm9fTC?9L3QTmn@aI2
+R1
+R2
+R3
+R4
+R5
+L0 379
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!s101 -O0
+!i113 1
+R10
+vtop_0
+R16
+!i10b 1
+!s100 Y>ok3mQOj34]0mb6;GZW51
+I>zA9JS9G6@h@2GZ]H;?JB1
+R1
+R2
+w1531131926
+8E:/STI/Project/ModelSim/Driver_AD9854/top.v
+FE:/STI/Project/ModelSim/Driver_AD9854/top.v
+L0 2
+R6
+r1
+!s85 0
+31
+R17
+!s107 E:/STI/Project/ModelSim/Driver_AD9854/top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/Driver_AD9854/top.v|
+!s101 -O0
+!i113 1
+R10
+vtop_T
+R0
+!i10b 1
+!s100 ONi5KKmn0mgbAi4zzYRWY1
+IYYPIl<^<cSinR[L;5?SGn2
+R1
+R2
+R11
+R12
+R13
+L0 2
+R6
+r1
+!s85 0
+31
+R7
+R14
+R15
+!s101 -O0
+!i113 1
+R10
+ntop_@t

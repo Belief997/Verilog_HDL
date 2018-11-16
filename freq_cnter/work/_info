@@ -1,0 +1,139 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/STI/Project/ModelSim/DAC_midspeed_dual
+vDuty_400M
+Z0 !s110 1531475837
+!i10b 1
+!s100 Jk=LN0T:YVHoD2OhAP]5b2
+I<eajQ5]Tej]FLiF@Sn^lV0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/STI/Project/ModelSim/freq_cnter
+w1531474038
+8E:/STI/Project/ModelSim/freq_cnter/Duty_400M.v
+FE:/STI/Project/ModelSim/freq_cnter/Duty_400M.v
+L0 2
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1531475837.000000
+!s107 E:/STI/Project/ModelSim/freq_cnter/Duty_400M.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/freq_cnter/Duty_400M.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@duty_400@m
+vFreMeasure
+Z6 !s110 1531475836
+!i10b 1
+!s100 2dZg0ZfIRA[TO9IFkX7f42
+I?YYhUDh69Q7=1K^8X6R[W0
+R1
+R2
+w1522069302
+8E:/STI/Project/ModelSim/freq_cnter/freq_cnter.v
+FE:/STI/Project/ModelSim/freq_cnter/freq_cnter.v
+L0 4
+R3
+r1
+!s85 0
+31
+Z7 !s108 1531475836.000000
+!s107 E:/STI/Project/ModelSim/freq_cnter/freq_cnter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/freq_cnter/freq_cnter.v|
+!s101 -O0
+!i113 1
+R5
+n@fre@measure
+vFreq_metr
+R0
+!i10b 1
+!s100 O2BYincSXlkj]XiOkDT@B0
+IOVmGBHAfjZSn;?S=W;ghG0
+R1
+R2
+w1531474350
+8E:/STI/Project/ModelSim/freq_cnter/Freq_metr.v
+FE:/STI/Project/ModelSim/freq_cnter/Freq_metr.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/freq_cnter/Freq_metr.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/freq_cnter/Freq_metr.v|
+!s101 -O0
+!i113 1
+R5
+n@freq_metr
+vgate
+R0
+!i10b 1
+!s100 3m;Yz_S<GmaK8_@M:Jo8^1
+IbFM^@c=E`@:ko0HW:0P^R3
+R1
+R2
+w1531469524
+8E:/STI/Project/ModelSim/freq_cnter/gate.v
+FE:/STI/Project/ModelSim/freq_cnter/gate.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/freq_cnter/gate.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/freq_cnter/gate.v|
+!s101 -O0
+!i113 1
+R5
+vtb
+R0
+!i10b 1
+!s100 [F[dNPUCiWIF[cgWXLTM`0
+IdX]iJ=QgBC942iLU2[Man1
+R1
+R2
+w1531475575
+8E:/STI/Project/ModelSim/freq_cnter/tb.v
+FE:/STI/Project/ModelSim/freq_cnter/tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R7
+!s107 E:/STI/Project/ModelSim/freq_cnter/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/freq_cnter/tb.v|
+!s101 -O0
+!i113 1
+R5
+vtop
+R6
+!i10b 1
+!s100 ;I6Q`Z8lnF>;A[>;?<ckn1
+IfU5hLT3Rc5X]:ZM]dZ6ak1
+R1
+R2
+w1531475835
+8E:/STI/Project/ModelSim/freq_cnter/top.v
+FE:/STI/Project/ModelSim/freq_cnter/top.v
+L0 2
+R3
+r1
+!s85 0
+31
+R7
+!s107 E:/STI/Project/ModelSim/freq_cnter/top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/freq_cnter/top.v|
+!s101 -O0
+!i113 1
+R5

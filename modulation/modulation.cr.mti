@@ -1,0 +1,36 @@
+E:/STI/Project/ModelSim/modulation/carry.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/modulation/carry.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module carr
+
+Top level modules:
+	carr
+
+} {} {}} E:/STI/Project/ModelSim/modulation/siggen.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/modulation/siggen.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module siggen
+
+Top level modules:
+	siggen
+
+} {} {}} E:/STI/Project/ModelSim/modulation/tb_modu.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/modulation/tb_modu.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} E:/STI/Project/ModelSim/modulation/top.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/modulation/top.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} E:/STI/Project/ModelSim/modulation/mod.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/modulation/mod.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mod
+
+Top level modules:
+	mod
+
+} {} {}}

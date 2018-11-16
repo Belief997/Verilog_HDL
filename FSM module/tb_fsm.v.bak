@@ -1,0 +1,19 @@
+`timescale 1ns/1ps
+module tb_fsm;
+	reg clk;
+	reg[20:0] data;
+	reg out;
+
+initial clk = 0;
+always begin #10 clk = ~clk; end
+
+//initial data = 21'b1101010101011010 ;
+
+top_fsm the_fa
+(
+	.clk(clk),.rst(1'b0),
+	.data(data),
+	.out(out)
+
+);
+endmodule 

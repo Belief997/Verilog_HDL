@@ -1,0 +1,34 @@
+
+`default_nettype none
+`timescale 1ns/1ps
+module testbench;
+    reg sdi,clk;
+    wire sclk,cs,sdo;
+    initial begin
+	   clk = 1;
+	   forever begin
+		    #5 clk = ~clk;
+	   end		
+    end
+    /*initial begin
+     rst=1'b0; 
+	   #2600 rst=1'b1;
+	   #3 rst=1'b0;
+	  end*/
+
+  initial begin 
+    sdi = 1'b1;
+    #2570;
+    forever begin
+        sdi = 1'b0;
+        #1310
+        for(integer i = 0; i < 16; i++) begin
+            #80 sdi = ~sdi;
+        end
+        #180;
+    end
+   end
+
+   top ads8865(clk,sdi,sclk,cs,sdo);
+endmodule
+

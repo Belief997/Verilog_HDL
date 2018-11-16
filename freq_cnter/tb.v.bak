@@ -1,0 +1,57 @@
+`timescale 1ns/1ps
+module tb;
+	reg clk200M;
+initial clk200M = 'b0;
+always #2.5 clk200M <= ~clk200M;
+
+wire [31:0] Fre;
+wire x, y;
+reg [31:0] cntSig;  initial cntSig = 'b0;
+always@(posedge clk200M) begin 
+	if (cntSig < 32'd2_00_000) cntSig <= cntSig + 1'b1;
+	else cntSig <= 'b0;
+
+end
+//assign Sig = (cntSig == 32'd400);//50k
+assign #40 x = (cntSig >= 32'd1_50_000);//10k//10//200
+assign y = (cntSig >= 32'd50_000);
+
+wire [31:0] x_count, r_count, xh_count, xl_count, xyh_count, xyl_count;
+wire [31:0] xfreq = x_count;// * 200;
+wire PreGate;
+
+
+
+// FreMeasure the_Fre(  
+//    .clk(clk200M), .rst_n(1'b1),  //low active
+//    .Sig_in(Sig),  
+//    .Fre(Fre)  //change the width 
+//); 
+//
+
+
+
+
+
+
+//gate the_gate(
+//	.clk200M(clk200M), .rst_n(1'b1),
+//	.PreGate(PreGate)
+//);
+//
+// Freq_metr the_Freq(
+//	.clk(clk200M), .rst_n(1'b1),
+//	.x(x),  .gate(PreGate),// .y(y),
+//	.x_count(x_count), .r_count(r_count), .xh_count(xh_count), .xl_count(xl_count)//,
+////	 .xyh_count(xyh_count), .xyl_count(xyl_count) //200M 28bit->268M
+//
+//);
+// Duty_400M the_Duty_400M(
+//	.clk100M(clk200M),
+//	.x(x), .y(y), .gate(PreGate),
+//	.xyr_count(r_count),.xyh_count(xyh_count), .xyl_count(xyl_count)
+//
+//);
+
+
+endmodule 

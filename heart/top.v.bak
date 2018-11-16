@@ -1,0 +1,96 @@
+//12 bit dds to 16 bit out heart
+module top(
+	input clk,
+	output reg unsigned [15:0] out
+);
+
+/////////////////////////////////////////////////////////////////////////////////
+////signed dds to signed or unsigned is ok -> out <= ((dds * up)>>>1) + 16'sd16384;
+//	wire signed [11:0] dds;
+//	wire signed [15:0] up, down;
+//initial begin	out = 'b0;	end
+//
+//always@(posedge clk)begin 
+//	if(dds > 12'sd0)
+//		out <= ((dds * up)>>>1) + 16'sd16384;// * up; //16384
+//	else
+//		out <= (( dds * down)>>>1) + 16'sd16384 ;// down;//-16'sb1*//16'sd1*(dds - 12'd2048)
+//end
+///////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////
+//////unsigned dds to signed out is ok -> (dds > 12'sd2048) out <= (((dds - 12'd2048)* up));
+//////unsigned dds to unsigned out is ok -> out <=((dds - 12'd2048)* up) + 16'd32768;
+wire unsigned [11:0] dds;
+wire signed [15:0] up, down;
+initial begin	out = 'b0;	end
+
+always@(posedge clk)begin 
+	if(dds > 12'sd2048)
+		out <=((dds - 12'd2048)* up) + 16'd32768;// * up; //16384
+	else
+		out <= ((dds - 12'd2048)* down) + 16'd32768 ;// down;
+end
+//////////////////////////////////////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////
+////signed down table
+////unsigned dds to unsigned out ->((dds - 12'd2048)* up) + 16'd32768;  -16'sb1*((dds - 12'd2048)* down[15:0]) + 16'd32768 ;
+////unsigned dds to signed out -> ((dds - 12'd2048)* up); -16'sb1*((dds - 12'd2048)* down[15:0]);
+//wire unsigned [11:0] dds;
+//wire signed [15:0] up;
+//wire signed [63:0] down;
+//initial begin	out = 'b0;	end
+//
+//always@(posedge clk)begin 
+//	if(dds > 12'sd2048)
+//		out <=((dds - 12'd2048)* up) + 16'd32768;// * up; //16384//(dds - 12'd2048)
+//	else
+//		out <= -16'sb1*((dds - 12'd2048)* down[15:0]) + 16'd32768 ;// down;
+//end
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+   dds #( 
+	.PHASE_W (24), 
+	.DATA_W (12), 
+	.TABLE_AW  (12),
+	.MEM_FILE  ("SineTable_unsigned_4096X12.dat")
+) dds_inst (
+       .FreqWord(24'd1678),//1678 -> 10k
+       .PhaseShift(24'b0),
+       .clk(clk),
+
+       .ClkEn(1'b1),
+       .Out(dds)) ;
+
+   dds #( 
+	.PHASE_W (24), 
+	.DATA_W (16), 
+	.TABLE_AW  (10),//1024
+	.MEM_FILE  ("heart_up.dat")
+) the_up (
+       .FreqWord(24'd168),
+       .PhaseShift(24'b0),
+       .clk(clk),
+
+       .ClkEn(1'b1),
+       .Out(up)) ;
+
+   dds #( 
+	.PHASE_W (24), 
+	.DATA_W (64), 
+	.TABLE_AW  (10),
+	.MEM_FILE  ("heart_down.dat")//_signed
+) the_down (
+       .FreqWord(24'd168),
+       .PhaseShift(24'd0),
+       .clk(clk),
+
+       .ClkEn(1'b1),
+       .Out(down)) ;
+
+
+endmodule 

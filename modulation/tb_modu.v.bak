@@ -1,0 +1,23 @@
+module tb;
+	reg clk;
+	wire [7:0] m;
+	wire [10:0] sig;
+
+initial clk = 1'b0;
+
+always begin
+	#10 clk = ~clk;
+
+end
+
+	assign m = 8'd256;
+ top the_top(
+	.clk(clk),
+	.m(m),			// ? Q0.8
+	.sig(sig) 
+
+);
+
+
+endmodule 
+

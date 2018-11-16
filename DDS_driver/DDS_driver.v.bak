@@ -1,0 +1,475 @@
+//DDS_driver for AD9959
+//input system_clk 100M
+//phase 14bit -> dac 10bit
+//freq 
+module DDS_driver(
+	input clk, rst_n,
+	input [31:0] Frq0, Frq1, Frq2, Frq3,
+	input [15:0] Phase0, Phase1, Phase2, Phase3,//16bit = 00+14bit phase
+	input [23:0] Amp0, Amp1, Amp2, Amp3,
+	output reg SCLK, CS, PWD, RST, UP,
+	output reg SD0, SD1, SD2, SD3,
+	output reg P0, P1, P2, P3
+);
+	localparam WCSR = 8'h00;
+	localparam WFR1 = 8'h01;//SYSCLK
+	localparam WCFRW0 = 8'h04;
+	localparam WCPOW0 = 8'h05;
+	localparam WACR = 8'h06;
+	localparam CSR_0 = 8'h10;
+	localparam CSR_1 = 8'h20;
+	localparam CSR_2 = 8'h40;
+	localparam CSR_3 = 8'h80;
+	localparam SYSCLK = 24'hd0_00_00;
+//	parameter CSR_1 = 8'h20; 
+	
+	localparam IDLE = 5'b00001;
+	localparam INIT = 5'b00010;
+	localparam LOCK = 5'b00100;
+	localparam WAIT = 5'b01000;
+	localparam SEND = 5'b10000;
+
+	reg [31:0] Wclk, Wclk_shift;
+	reg [31:0] Frq0_reg, Frq1_reg, Frq2_reg, Frq3_reg;
+	reg [15:0] Phase0_reg, Phase1_reg, Phase2_reg, Phase3_reg;
+	reg [23:0] Amp0_reg, Amp1_reg, Amp2_reg, Amp3_reg;
+	reg [319:0] data_reg, data_last;
+initial begin
+	Wclk = {WFR1, SYSCLK}; Wclk_shift = 'b0;
+	Frq0_reg = 'b0; Frq1_reg = 'b0; Frq2_reg = 'b0; Frq3_reg = 'b0;
+	Phase0_reg = 'b0; Phase1_reg = 'b0; Phase2_reg = 'b0; Phase3_reg = 'b0;
+	Amp0_reg = 'b0; Amp1_reg = 'b0; Amp2_reg = 'b0; Amp3_reg = 'b0; 
+
+	data_reg = 'b0; data_last = 'b0;
+end
+initial begin
+	SCLK = 'b1; CS = 'b1; PWD ='b0; RST ='b0; UP = 'b0;	
+	SD0 = 'b0; SD1 = 'b0; SD2 = 'b0; SD3 = 'b0;
+	P0 = 'b0; P1 = 'b0; P2 = 'b0; P3 = 'b0; 
+end
+
+always@(posedge clk or negedge rst_n) begin 
+	if(!rst_n) begin
+	Frq0_reg = 'b0; Frq1_reg = 'b0; Frq2_reg = 'b0; Frq3_reg = 'b0;
+	Phase0_reg = 'b0; Phase1_reg = 'b0; Phase2_reg = 'b0; Phase3_reg = 'b0;
+	Amp0_reg = 'b0; Amp1_reg = 'b0; Amp2_reg = 'b0; Amp3_reg = 'b0; 
+	end else begin
+	Frq0_reg = Frq0; Frq1_reg = Frq1; Frq2_reg = Frq2; Frq3_reg = Frq3;
+	Phase0_reg = Phase0; Phase1_reg = Phase1; Phase2_reg = Phase2; Phase3_reg = Phase3;
+	Amp0_reg = Amp0; Amp1_reg = Amp1; Amp2_reg = Amp2; Amp3_reg = Amp3; 
+	end
+end
+
+	reg [3:0] p_count;
+	reg [6:0] init_count;
+	reg [20:0] lock_count;
+	reg [2:0] wait_count;
+	reg [9:0] send_count;
+	reg [4:0] cstate, nstate;
+	reg flag;
+
+	initial begin p_count = 'b0; init_count = 'b0; lock_count = 'b0; wait_count = 'b0; send_count = 'b0; cstate = IDLE; flag = 'b1; end
+
+
+
+	always@(posedge clk or negedge rst_n) begin
+		if(!rst_n)	cstate <= IDLE;
+		else		cstate <= nstate;
+	end
+
+	always@(posedge clk or negedge rst_n) begin
+		if(!rst_n)	p_count <= 'b0;
+		else		p_count <= p_count + 'b1;
+	end
+
+	always@(posedge clk or negedge rst_n) begin
+		if(!rst_n) init_count <= 'b0;
+		else if(cstate == INIT)//|| nstate == CONV)
+			if(init_count < 7'd69)		    
+			init_count <= init_count + 'b1;   
+			else
+			init_count <= 'b0;
+	end
+	
+	always@(posedge clk or negedge rst_n) begin
+		if(!rst_n) lock_count <= 'b0;
+		else if(cstate == LOCK)//|| nstate == CONV)
+			if(lock_count < 21'd100_100)		    
+			lock_count <= lock_count + 'b1;   
+			else
+			lock_count <= 'b0;
+	end
+
+	always@(posedge clk or negedge rst_n) begin
+		if(!rst_n)	wait_count <= 'b0;
+		else if(cstate == WAIT)//|| nstate == CONV)
+			if(wait_count < 3'd5)		    
+			wait_count <= wait_count + 'b1;   
+			else
+			wait_count <= 'b0;
+	end
+
+	always@(posedge clk or negedge rst_n) begin
+		if(!rst_n)	send_count <= 'b0;
+		else if(cstate == SEND)//|| nstate == CONV) //when it becomes CONV,conv_cnt start from 0
+			if(send_count < 10'd645)		    //on conv_cnt == 34, data transmit and hold is done ,  get >=20ns to convert 
+			send_count <= send_count + 'b1;    //when cnt == 36, nstate== WAIT,after a clk_time cstate->WAIT, after a clk_time CS^(36+2*10=20ns)
+			else
+			send_count <= 'b0;
+	end
+
+	always@(cstate, p_count, init_count,lock_count, wait_count, send_count) begin
+		nstate = IDLE;
+		case(cstate)
+		IDLE: begin
+			if(p_count == 4'd15)
+				nstate = INIT;
+			else 
+				nstate = IDLE;
+			end
+		INIT:begin
+			if(init_count == 7'd69)	nstate = LOCK;
+			else	nstate = INIT;
+		end
+		LOCK:begin
+			if(lock_count == 21'd100_100)	nstate = WAIT;
+			else	nstate = LOCK;
+		end
+		WAIT: begin
+			if((wait_count == 3'd5)&&(flag))
+				nstate = SEND;
+			else 
+				nstate = WAIT;
+			end
+		SEND: begin
+			if(send_count == 10'd645)
+				nstate = WAIT;
+			else
+				nstate = SEND;
+			end
+		default: begin
+			nstate = IDLE;
+			end
+		endcase
+	end
+
+	always@(posedge clk or negedge rst_n) begin
+		if(!rst_n) begin
+			SCLK = 'b1; CS = 'b1; PWD ='b0; RST ='b0; UP = 'b0;	
+			SD0 = 'b0; SD1 = 'b0; SD2 = 'b0; SD3 = 'b0;
+			P0 = 'b0; P1 = 'b0; P2 = 'b0; P3 = 'b0; 
+			end
+		else 
+		case(cstate)
+			IDLE: begin
+				SCLK = 'b1; CS = 'b1; PWD ='b0; RST ='b0; UP = 'b0;		
+				SD0 = 'b0; SD1 = 'b0; SD2 = 'b0; SD3 = 'b0;
+				P0 = 'b0; P1 = 'b0; P2 = 'b0; P3 = 'b0; 
+				Wclk_shift <= Wclk;
+//				data_reg <= 16'b0;//
+			end
+			INIT: begin					  
+				CS <= 1'b0;
+				if((init_count == 1) || (init_count == 2))
+				RST = ~RST;
+				if((init_count >= 2)&&(init_count < 7'd66))   
+				SCLK = ~SCLK;				  
+				if(( !SCLK)&&(init_count[0]==1'b0)&&(init_count >= 2)&&(init_count < 65)) begin
+				Wclk_shift <= Wclk_shift << 1;
+				  end
+				else
+					Wclk_shift <= Wclk_shift;
+				if( (init_count >= 2)&&(init_count[0]==1'b0))	SD0 <= Wclk_shift[31];//( !CLK)&&  ?????
+//				else SD0 <= 'b0;
+				if((init_count == 66) || (init_count == 67))
+				UP = ~UP;
+//				if((init_count == 68))	CS <= 1'b1;
+			end
+			LOCK: begin
+				CS <= 1'b1;
+				SCLK <= 1'b1;
+				SD0 <= 1'b0;
+			end
+			WAIT: begin
+				CS <= 1'b1;
+				SCLK <= 1'b1;
+				SD0 <= 1'b0;
+				if(wait_count == 3'd2) begin
+					data_reg <= {	WCSR, CSR_0, WCFRW0, Frq0_reg, WCPOW0, Phase0_reg,
+							WCSR, CSR_1, WCFRW0, Frq1_reg, WCPOW0, Phase1_reg,
+							WCSR, CSR_2, WCFRW0, Frq2_reg, WCPOW0, Phase2_reg,
+							WCSR, CSR_3, WCFRW0, Frq3_reg, WCPOW0, Phase3_reg};
+				end else 	data_reg <= data_reg;
+				if(wait_count == 3'd3) begin
+					if(data_reg != data_last)begin
+						flag <= 1'b1;
+						data_last <= data_reg;
+					end
+					else flag <= 'b0;
+				end
+			end
+			SEND: begin					  //CLK^ is active , but CLK convert init is high  
+				CS <= 1'b0;
+				if((send_count >= 0)&&(send_count < 10'd640))   
+				SCLK = ~SCLK;				  
+				if(( !SCLK)&&(send_count[0]==1'b0)&&(send_count >= 0)&&(send_count < 641)) begin
+				data_reg <= data_reg << 1;
+				  end
+				else
+					data_reg <= data_reg;
+				if(/*(send_count >= 2)&&*/(send_count[0]==1'b0))	SD0 <= data_reg[319];//( !CLK)&&  ?????
+//				else SD0 <= 'b0;
+				if((send_count == 642) || (send_count == 643))
+				UP = ~UP;
+//				if((send_count == 644))	CS <= 1'b1;
+			end
+			default: begin
+				CS <= 1'b1;
+				SCLK <= 1'b1;
+				SD0 <= 1'b0;
+				data_reg <= data_reg;
+			end
+			endcase
+	end
+ 
+endmodule 
+
+
+/*
+
+//DDS_driver for AD9959
+//input system_clk 100M
+//phase 14bit -> dac 10bit
+//freq 
+module DDS_driver(
+	input clk, rst_n,
+	input [31:0] Frq0, Frq1, Frq2, Frq3,
+	input [15:0] Phase0, Phase1, Phase2, Phase3,//16bit = 00+14bit phase
+	input [23:0] Amp0, Amp1, Amp2, Amp3,
+	output reg SCLK, CS, PWD, RST, UP,
+	output reg SD0, SD1, SD2, SD3,
+	output reg P0, P1, P2, P3
+);
+	localparam WCSR = 8'h00;
+	localparam WFR1 = 8'h01;//SYSCLK
+	localparam WCFRW0 = 8'h04;
+	localparam WCPOW0 = 8'h05;
+	localparam WACR = 8'h06;
+	localparam CSR_0 = 8'h10;
+	localparam CSR_1 = 8'h20;
+	localparam CSR_2 = 8'h40;
+	localparam CSR_3 = 8'h80;
+	localparam SYSCLK = 24'hd0_00_00;
+//	parameter CSR_1 = 8'h20; 
+	
+	localparam IDLE = 5'b00001;
+	localparam INIT = 5'b00010;
+	localparam LOCK = 5'b00100;
+	localparam WAIT = 5'b01000;
+	localparam SEND = 5'b10000;
+
+	reg [31:0] Wclk, Wclk_shift;
+	reg [31:0] Frq0_reg, Frq1_reg, Frq2_reg, Frq3_reg;
+	reg [15:0] Phase0_reg, Phase1_reg, Phase2_reg, Phase3_reg;
+	reg [23:0] Amp0_reg, Amp1_reg, Amp2_reg, Amp3_reg;
+	reg [319:0] data_reg, data_last;
+initial begin
+	Wclk = {WFR1, SYSCLK}; Wclk_shift = 'b0;
+	Frq0_reg = 'b0; Frq1_reg = 'b0; Frq2_reg = 'b0; Frq3_reg = 'b0;
+	Phase0_reg = 'b0; Phase1_reg = 'b0; Phase2_reg = 'b0; Phase3_reg = 'b0;
+	Amp0_reg = 'b0; Amp1_reg = 'b0; Amp2_reg = 'b0; Amp3_reg = 'b0; 
+
+	data_reg = 'b0; data_last = 'b0;
+end
+initial begin
+	SCLK = 'b1; CS = 'b1; PWD ='b0; RST ='b0; UP = 'b0;	
+	SD0 = 'b0; SD1 = 'b0; SD2 = 'b0; SD3 = 'b0;
+	P0 = 'b0; P1 = 'b0; P2 = 'b0; P3 = 'b0; 
+end
+
+always@(posedge clk or negedge rst_n) begin 
+	if(!rst_n) begin
+	Frq0_reg = 'b0; Frq1_reg = 'b0; Frq2_reg = 'b0; Frq3_reg = 'b0;
+	Phase0_reg = 'b0; Phase1_reg = 'b0; Phase2_reg = 'b0; Phase3_reg = 'b0;
+	Amp0_reg = 'b0; Amp1_reg = 'b0; Amp2_reg = 'b0; Amp3_reg = 'b0; 
+	end else begin
+	Frq0_reg = Frq0; Frq1_reg = Frq1; Frq2_reg = Frq2; Frq3_reg = Frq3;
+	Phase0_reg = Phase0; Phase1_reg = Phase1; Phase2_reg = Phase2; Phase3_reg = Phase3;
+	Amp0_reg = Amp0; Amp1_reg = Amp1; Amp2_reg = Amp2; Amp3_reg = Amp3; 
+	end
+end
+
+	reg [3:0] p_count;
+	reg [6:0] init_count;
+	reg [20:0] lock_count;
+	reg [2:0] wait_count;
+	reg [9:0] send_count;
+	reg [4:0] cstate, nstate;
+	reg flag;
+
+	initial begin p_count = 'b0; init_count = 'b0; lock_count = 'b0; wait_count = 'b0; send_count = 'b0; cstate = IDLE; flag = 'b1; end
+
+
+
+	always@(posedge clk or negedge rst_n) begin
+		if(!rst_n)	cstate <= IDLE;
+		else		cstate <= nstate;
+	end
+
+	always@(posedge clk or negedge rst_n) begin
+		if(!rst_n)	p_count <= 'b0;
+		else		p_count <= p_count + 'b1;
+	end
+
+	always@(posedge clk or negedge rst_n) begin
+		if(!rst_n) init_count <= 'b0;
+		else if(cstate == INIT)//|| nstate == CONV)
+			if(init_count < 7'd69)		    
+			init_count <= init_count + 'b1;   
+			else
+			init_count <= 'b0;
+	end
+	
+//	always@(posedge clk or negedge rst_n) begin
+//		if(!rst_n) lock_count <= 'b0;
+//		else if(cstate == LOCK)//|| nstate == CONV)
+//			if(lock_count < 21'd100_100)		    
+//			lock_count <= lock_count + 'b1;   
+//			else
+//			lock_count <= 'b0;
+//	end
+
+	always@(posedge clk or negedge rst_n) begin
+		if(!rst_n)	wait_count <= 'b0;
+		else if(cstate == WAIT)//|| nstate == CONV)
+			if(wait_count < 3'd5)		    
+			wait_count <= wait_count + 'b1;   
+			else
+			wait_count <= 'b0;
+	end
+
+	always@(posedge clk or negedge rst_n) begin
+		if(!rst_n)	send_count <= 'b0;
+		else if(cstate == SEND)//|| nstate == CONV) //when it becomes CONV,conv_cnt start from 0
+			if(send_count < 10'd645)		    //on conv_cnt == 34, data transmit and hold is done ,  get >=20ns to convert 
+			send_count <= send_count + 'b1;    //when cnt == 36, nstate== WAIT,after a clk_time cstate->WAIT, after a clk_time CS^(36+2*10=20ns)
+			else
+			send_count <= 'b0;
+	end
+
+	always@(cstate, p_count, init_count,lock_count, wait_count, send_count) begin
+		nstate = IDLE;
+		case(cstate)
+		IDLE: begin
+			if(p_count == 4'd15)
+				nstate = INIT;
+			else 
+				nstate = IDLE;
+			end
+		INIT:begin
+			if(init_count == 7'd69)	nstate = WAIT;
+			else	nstate = INIT;
+		end
+//		LOCK:begin
+//			if(lock_count == 21'd100_100)	nstate = WAIT;
+//			else	nstate = LOCK;
+//		end
+		WAIT: begin
+			if((wait_count == 3'd5)&&(flag))
+				nstate = SEND;
+			else 
+				nstate = WAIT;
+			end
+		SEND: begin
+			if(send_count == 10'd645)
+				nstate = WAIT;
+			else
+				nstate = SEND;
+			end
+		default: begin
+			nstate = IDLE;
+			end
+		endcase
+	end
+
+	always@(posedge clk or negedge rst_n) begin
+		if(!rst_n) begin
+			SCLK = 'b1; CS = 'b1; PWD ='b0; RST ='b0; UP = 'b0;	
+			SD0 = 'b0; SD1 = 'b0; SD2 = 'b0; SD3 = 'b0;
+			P0 = 'b0; P1 = 'b0; P2 = 'b0; P3 = 'b0; 
+			end
+		else 
+		case(cstate)
+			IDLE: begin
+				SCLK = 'b1; CS = 'b1; PWD ='b0; RST ='b0; UP = 'b0;		
+				SD0 = 'b0; SD1 = 'b0; SD2 = 'b0; SD3 = 'b0;
+				P0 = 'b0; P1 = 'b0; P2 = 'b0; P3 = 'b0; 
+				Wclk_shift <= Wclk;
+//				data_reg <= 16'b0;//
+			end
+			INIT: begin					  
+				CS <= 1'b0;
+				if((init_count == 1) || (init_count == 2))
+				RST = ~RST;
+				if((init_count >= 2)&&(init_count < 7'd66))   
+				SCLK = ~SCLK;				  
+				if(( !SCLK)&&(init_count[0]==1'b0)&&(init_count >= 2)&&(init_count < 65)) begin
+				Wclk_shift <= Wclk_shift << 1;
+				  end
+				else
+					Wclk_shift <= Wclk_shift;
+				if( (init_count >= 2)&&(init_count[0]==1'b0))	SD0 <= Wclk_shift[31];//( !CLK)&&  ?????
+//				else SD0 <= 'b0;
+				if((init_count == 66) || (init_count == 67))
+				UP = ~UP;
+//				if((init_count == 68))	CS <= 1'b1;
+			end
+//			LOCK: begin
+//				CS <= 1'b1;
+//				SCLK <= 1'b1;
+//				SD0 <= 1'b0;
+//			end
+			WAIT: begin
+				CS <= 1'b1;
+				SCLK <= 1'b1;
+				SD0 <= 1'b0;
+				if(wait_count == 3'd2) begin
+					data_reg <= {	WCSR, CSR_0, WCFRW0, Frq0_reg, WCPOW0, Phase0_reg,
+							WCSR, CSR_1, WCFRW0, Frq1_reg, WCPOW0, Phase1_reg,
+							WCSR, CSR_2, WCFRW0, Frq2_reg, WCPOW0, Phase2_reg,
+							WCSR, CSR_3, WCFRW0, Frq3_reg, WCPOW0, Phase3_reg};
+				end else 	data_reg <= data_reg;
+				if(wait_count == 3'd3) begin
+					if(data_reg != data_last)begin
+						flag <= 1'b1;
+						data_last <= data_reg;
+					end
+					else flag <= 'b0;
+				end
+			end
+			SEND: begin					  //CLK^ is active , but CLK convert init is high  
+				CS <= 1'b0;
+				if((send_count >= 0)&&(send_count < 10'd640))   
+				SCLK = ~SCLK;				  
+				if(( !SCLK)&&(send_count[0]==1'b0)&&(send_count >= 0)&&(send_count < 641)) begin
+				data_reg <= data_reg << 1;
+				  end
+				else
+					data_reg <= data_reg;
+				if((send_count[0]==1'b0))	SD0 <= data_reg[319];//( !CLK)&&  ?????
+//				else SD0 <= 'b0;
+				if((send_count == 642) || (send_count == 643))
+				UP = ~UP;
+//				if((send_count == 644))	CS <= 1'b1;
+			end
+			default: begin
+				CS <= 1'b1;
+				SCLK <= 1'b1;
+				SD0 <= 1'b0;
+				data_reg <= data_reg;
+			end
+			endcase
+	end
+ 
+endmodule 
+*/

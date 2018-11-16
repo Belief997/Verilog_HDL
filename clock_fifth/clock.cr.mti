@@ -1,0 +1,43 @@
+E:/STI/Project/ModelSim/clock_fifth/Bcd2Seg.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/clock_fifth/Bcd2Seg.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Bcd2Seg
+
+Top level modules:
+	Bcd2Seg
+
+} {} {}} E:/STI/Project/ModelSim/clock_fifth/tb_clk.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/clock_fifth/tb_clk.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} E:/STI/Project/ModelSim/clock_fifth/Bin2Bcd.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/clock_fifth/Bin2Bcd.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Bin2Bcd
+
+Top level modules:
+	Bin2Bcd
+
+} {} {}} E:/STI/Project/ModelSim/clock_fifth/top_clk.v {1 {vlog -work work -stats=none {E:\STI\Project\ModelSim\clock_fifth\top_clk.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module top_clk
+
+Top level modules:
+	top_clk
+
+} {} {}} E:/STI/Project/ModelSim/clock_fifth/keys.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/clock_fifth/keys.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module keys
+
+Top level modules:
+	keys
+
+} {} {}} E:/STI/Project/ModelSim/clock_fifth/clock.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/clock_fifth/clock.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module clock
+
+Top level modules:
+	clock
+
+} {} {}}

@@ -1,0 +1,43 @@
+E:/STI/Project/ModelSim/PWM_DDS/top.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/PWM_DDS/top.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} E:/STI/Project/ModelSim/PWM_DDS/dds.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/PWM_DDS/dds.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dds
+
+Top level modules:
+	dds
+
+} {} {}} E:/STI/Project/ModelSim/PWM_DDS/pwm.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/PWM_DDS/pwm.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module PWM
+
+Top level modules:
+	PWM
+
+} {} {}} E:/STI/Project/ModelSim/PWM_DDS/range_mod.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/PWM_DDS/range_mod.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module range_mod
+
+Top level modules:
+	range_mod
+
+} {} {}} E:/STI/Project/ModelSim/PWM_DDS/keys.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/PWM_DDS/keys.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module keys
+
+Top level modules:
+	keys
+
+} {} {}} E:/STI/Project/ModelSim/PWM_DDS/tb.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/PWM_DDS/tb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}}

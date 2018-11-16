@@ -1,0 +1,84 @@
+
+module top_t (
+	input clk,
+	output reg sig, noise, 
+	output man, en0,
+	output reg clock
+);
+
+
+//sig & noise out 
+wire [7:0]sig_0;
+wire [11:0] noise_0;
+always@(posedge clk)begin
+	sig <= sig_0[0];
+	noise <= noise_0[0];
+end
+
+
+reg [13:0] div; initial div = 14'd1_000;
+
+//en1 en2 sig
+reg [13:0] cnt_div; initial cnt_div = 'b0;
+//wire en0 = (cnt_div == div - 1'b1); 
+assign en0 = (cnt_div == div - 1'b1); 
+wire en1 = (cnt_div == ((div >> 1) - 1'b1));
+always@(posedge clk)begin
+	if(cnt_div < (div - 1'b1))	cnt_div <= cnt_div + 1'b1;
+	else cnt_div <= 'b0;
+end
+
+//en  clock
+always@(posedge clk)begin
+	if(en0) clock <= 1'b1;
+	else if(en1) clock <= 1'b0;
+	else clock <= clock;
+end
+
+//en10M noise
+reg [3:0] cnt10; initial cnt10 = 'b0;
+wire en10M = (cnt10 == 4'd9);
+always@(posedge clk) begin
+	if(cnt10 < 4'd9)	cnt10 <= cnt10 + 1'b1;
+	else cnt10 <= 'b0;
+end
+
+wire enman, sysman;
+
+
+//man filter 
+wire [7:0] man_ad = (man)? 127 : 0;
+wire [7:0] man_n  = man_ad + noise_0[2:0];
+wire [7:0] man_fir;
+reg en_fir; initial en_fir = 'b0;
+always@(posedge clk) en_fir <= ~en_fir;
+reg [7:0] man_fir_in; initial man_fir_in = 'b0;
+always@(posedge clk) man_fir_in <= en_fir ? man_n : man_fir_in;
+
+//////////////////////////////////////////////////////////
+LFSR#( .W(8), .MASK (32'h11d) 
+)the_sig(
+	.clk(clk), .clken(en0),
+	.lfsr(sig_0)
+);
+
+LFSR#( .W(12), .MASK (32'h1053) 
+)the_noise(
+	.clk(clk), .clken(en10M),
+	.lfsr(noise_0)
+);
+
+man_coder the_man(
+	.clk(clk),
+	.en0(en0), .en1(en1),
+	.in(sig_0[0]),
+	.out(man)
+);
+
+FIR_Hamming_58Taps_LP_0d500_CSDMult_p175340301074251 the_fir
+(
+    .in(man_fir_in),
+    .out(man_fir)
+);
+
+endmodule 

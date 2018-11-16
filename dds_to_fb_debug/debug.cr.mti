@@ -1,0 +1,87 @@
+E:/STI/Project/ModelSim/dds_to_fb_debug/top.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/dds_to_fb_debug/top.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} E:/STI/Project/ModelSim/dds_to_fb_debug/dds_to_fb.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/dds_to_fb_debug/dds_to_fb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dds_to_fb
+
+Top level modules:
+	dds_to_fb
+
+} {} {}} E:/STI/Project/ModelSim/dds_to_fb_debug/tb_re.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/dds_to_fb_debug/tb_re.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb_re
+
+Top level modules:
+	tb_re
+
+} {} {}} E:/STI/Project/ModelSim/dds_to_fb_debug/keys.v {1 {vlog -work work -stats=none {E:\STI\Project\ModelSim\dds_to_fb_debug\keys.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module keys
+
+Top level modules:
+	keys
+
+} {} {}} E:/STI/Project/ModelSim/dds_to_fb_debug/FIRtest.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/dds_to_fb_debug/FIRtest.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p000015838978451
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p000016338690936
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p000051607555144
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p000092238312301
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p000140619129891
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p000199225120333
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p000270585774593
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p000357250745826
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p000461754402763
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p000586579595082
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p000734121089916
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p000906649149747
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p001106273726935
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p001334909748964
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p001594243961096
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p001885703779546
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p002210428588641
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p002569243889922
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p002962638680102
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p003390746398472
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p003853329743345
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p004349769611730
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p004879058367434
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p005439797590611
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p006030200407157
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p006648098440041
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p007290953367230
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p007955873013229
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p008639631844000
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p009338695679029
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p010049250380228
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p010767234225885
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p011488373629809
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p012208221821634
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p012922200064683
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p013625640953271
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p014313833302428
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p014982068119995
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p015625685134393
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p016240119341168
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p016820947027910
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p017363930740399
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p017865062662823
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p018320605901465
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p018727133184346
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p019081562518427
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p019381189381008
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p019623715062251
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p019807270820977
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p019930437565362
+-- Compiling module FIR_Hamming_100Taps_LP_0d020_CSDMult_p019992260823290
+-- Compiling module FIR_Hamming_100Taps_LP_0d020
+
+Top level modules:
+	FIR_Hamming_100Taps_LP_0d020
+
+} {} {}}

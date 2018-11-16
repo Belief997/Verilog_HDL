@@ -1,0 +1,37 @@
+//tb for 74HC194
+//f_CP is 100MHz
+//plz set run time longer than 220ns
+`timescale 1ns/1ps
+module tb_74HC194;
+reg CP; initial CP = 'b0;
+always #5 CP <= ~CP;
+
+reg CR_n, DS;
+reg [1:0] S;
+wire [3:0] D = 4'b1101;
+wire [3:0] Q;
+
+initial begin
+	CR_n = 'b0;      //asy clear enabla
+	DS = 'b1;
+	S = 'b0;
+	#32 CR_n = 'b1;  //clear done
+	#23 S = 2'b01;	 //right shift DS = 0 
+	#4 DS = 'b0; 	 
+	#30 S = 2'b10;   //left shift DS = 0 
+	#50 S = 2'b11;	 //set data D = 4'b1101
+	    DS = 1'b1;
+	#23 S = 2'b01;   //right shift DS = 1 
+	#10 S = 2'b10;	 //left shift DS = 1 
+	#30 S = 2'b00;   //hold shifter
+end
+
+S_74HC194 the_shifter(
+//	input L,
+	.S(S),	      		//?????S[1]:S1 S[0]:S0
+	.CR_n(CR_n), .CP(CP),   //???????
+	.DS(DS),       		//????DS[1]:Dsl DS[0]:Dsr
+	.D(D),        		//????
+	.Q(Q)    		//????
+	);
+endmodule 

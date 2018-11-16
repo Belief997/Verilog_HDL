@@ -1,0 +1,25 @@
+E:/STI/Project/ModelSim/DAC_midspeed_dual/tb.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/DAC_midspeed_dual/tb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+
+} {} {}} E:/STI/Project/ModelSim/DAC_midspeed_dual/top.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/DAC_midspeed_dual/top.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} E:/STI/Project/ModelSim/DAC_midspeed_dual/dds.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/DAC_midspeed_dual/dds.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dds
+
+Top level modules:
+	dds
+
+} {} {}} E:/STI/Project/ModelSim/DAC_midspeed_dual/DAC_driver.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/DAC_midspeed_dual/DAC_driver.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dac_driver
+
+Top level modules:
+	dac_driver
+
+} {} {}}

@@ -1,0 +1,159 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/STI/Project/ModelSim/modulation
+vdds
+Z0 !s110 1507376273
+!i10b 1
+!s100 dAEgT0Le_6ldZO:O6NnFO3
+I5h]baZ8:_f59FbfRXSKEo0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/STI/Project/ModelSim/PWM_DDS
+w1507134265
+8E:/STI/Project/ModelSim/PWM_DDS/dds.v
+FE:/STI/Project/ModelSim/PWM_DDS/dds.v
+L0 1
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1507376273.000000
+!s107 E:/STI/Project/ModelSim/PWM_DDS/dds.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/PWM_DDS/dds.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vDeadtime
+!s110 1507345378
+!i10b 1
+!s100 6SbHUGCW_<4A`lXN1Sh>=0
+I]6DnZN7Me6H;6NhQkD5=G0
+R1
+R2
+w1506953158
+Z6 8E:/STI/Project/ModelSim/PWM_DDS/pwm.v
+Z7 FE:/STI/Project/ModelSim/PWM_DDS/pwm.v
+L0 40
+R3
+r1
+!s85 0
+31
+!s108 1507345378.000000
+Z8 !s107 E:/STI/Project/ModelSim/PWM_DDS/pwm.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/PWM_DDS/pwm.v|
+!s101 -O0
+!i113 1
+R5
+n@deadtime
+vkeys
+R0
+!i10b 1
+!s100 ?3R79H5;2f54FEG_;TQ240
+I3kGWhJ0^@AZaNPN=4e__U3
+R1
+R2
+w1507372421
+8E:/STI/Project/ModelSim/PWM_DDS/keys.v
+FE:/STI/Project/ModelSim/PWM_DDS/keys.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/PWM_DDS/keys.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/PWM_DDS/keys.v|
+!s101 -O0
+!i113 1
+R5
+vPWM
+R0
+!i10b 1
+!s100 5RMiF2D`?0Ui3:[;U1Jj53
+Ih]Km_`F`mST4@G@c19C[D3
+R1
+R2
+w1507376209
+R6
+R7
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R8
+R9
+!s101 -O0
+!i113 1
+R5
+n@p@w@m
+vrange_mod
+R0
+!i10b 1
+!s100 D@g;]G=1EVJWXSd@UO=VR3
+IFJAYV=ggGJ>3J4GgKLmLR0
+R1
+R2
+w1507373943
+8E:/STI/Project/ModelSim/PWM_DDS/range_mod.v
+FE:/STI/Project/ModelSim/PWM_DDS/range_mod.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/PWM_DDS/range_mod.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/PWM_DDS/range_mod.v|
+!s101 -O0
+!i113 1
+R5
+vtb
+!s110 1507376272
+!i10b 1
+!s100 _`f6WjM526zT5_R9;?b<S3
+IJ=`h]ljJ8<;H19zCOBDbD3
+R1
+R2
+w1507376270
+8E:/STI/Project/ModelSim/PWM_DDS/tb.v
+FE:/STI/Project/ModelSim/PWM_DDS/tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1507376272.000000
+!s107 E:/STI/Project/ModelSim/PWM_DDS/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/PWM_DDS/tb.v|
+!s101 -O0
+!i113 1
+R5
+vtop
+R0
+!i10b 1
+!s100 o@Cc3`h;@zBa4SaGCm:UM1
+IzljCdCc49lEK9j1O7XMgj0
+R1
+R2
+w1507376137
+8E:/STI/Project/ModelSim/PWM_DDS/top.v
+FE:/STI/Project/ModelSim/PWM_DDS/top.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/PWM_DDS/top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/PWM_DDS/top.v|
+!s101 -O0
+!i113 1
+R5

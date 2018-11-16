@@ -1,0 +1,99 @@
+//the first IIR  Band Stop filter
+/*
+ * Discrete-Time IIR Filter (real)
+ * -------------------------------
+ * Filter Structure    : Direct-Form II, Second-Order Sections
+ * Order	       : 6
+ * Number of Sections  : 3
+ * Stable              : Yes
+ * Linear Phase        : No
+ */
+//2**14
+module IIR #(parameter b0 = 13_044, b1 = -24_789, b2 = -2, a1 = -30_885, a2 = 16_242,Datain_AW = 12, Dataout_AW = 12, DataShift = 14)(
+	input clk, nrst,
+	input signed [Datain_AW - 1 : 0] In,
+	output signed [Dataout_AW - 1 : 0] Out
+
+);
+	reg signed [Datain_AW - 1 : 0] x0, x1, x2, y1, y2, sum1, sum2, sub;
+	reg signed [Dataout_AW - 1 : 0] y;
+	wire flag1, flag2;
+	reg [2:0] p_cnt;
+	
+	parameter IDLE = 3'b001;
+	parameter UPDATE = 3'b010;
+	parameter FILTR = 3'b100;
+
+	reg [2:0] cstate, nstate;
+
+initial begin
+
+	x0 = 'b0;
+	x1 = 'b0;
+	x2 = 'b0;
+	y1 = 'b0;
+	y2 = 'b0;
+	sum1 = 'b0;
+	sum2 = 'b0;
+	sub = 'b0;
+	y = 'b0;
+	cstate = IDLE;
+	p_cnt= 'b0;
+
+
+end
+	
+always@(posedge clk or negedge nrst) begin
+	if(!nrst) cstate <= IDLE;
+	else cstate <= nstate;
+end
+
+always@(posedge clk or negedge nrst) begin
+	if(!nrst) p_cnt <= 'b0;
+	else p_cnt <= p_cnt + 1'b1;
+end
+
+always@(p_cnt, cstate)begin
+	nstate <= IDLE;
+	case(cstate)
+		IDLE:begin
+			if(p_cnt == 3'd7)	nstate <= UPDATE;
+			else	nstate <= IDLE;
+		end
+		UPDATE:begin
+			if(flag1)	nstate <= FILTR;
+			else	nstate <= UPDATE;
+		end
+		FILTR:begin
+			if(flag2)	nstate <= UPDATE;
+			else	nstate <= FILTR;
+		end
+		default:begin
+			nstate <= IDLE;
+		end
+	endcase
+end
+
+always@(posedge clk or negedge nrst)begin
+	if(!nrst)begin
+		
+	end else begin
+
+
+	end
+
+
+end
+
+
+
+
+
+
+
+
+
+
+
+
+endmodule 

@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/STI/Project/ModelSim/sofmax
+vdac_driver
+Z0 !s110 1532001533
+!i10b 1
+!s100 D:gd=::Ti4neSEiWCdajR2
+IgjFo<JJ9R`?_6DiPzjE2c3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/STI/Project/ModelSim/DAC_midspeed_dual
+w1532001251
+8E:/STI/Project/ModelSim/DAC_midspeed_dual/DAC_driver.v
+FE:/STI/Project/ModelSim/DAC_midspeed_dual/DAC_driver.v
+L0 4
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1532001533.000000
+!s107 E:/STI/Project/ModelSim/DAC_midspeed_dual/DAC_driver.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/DAC_midspeed_dual/DAC_driver.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vdds
+R0
+!i10b 1
+!s100 FIWd]5PaA22Vi?:W3<MNe3
+I^gaZm`kO:mM3;;:RXBe0`1
+R1
+R2
+w1521944151
+8E:/STI/Project/ModelSim/DAC_midspeed_dual/dds.v
+FE:/STI/Project/ModelSim/DAC_midspeed_dual/dds.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/DAC_midspeed_dual/dds.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/DAC_midspeed_dual/dds.v|
+!s101 -O0
+!i113 1
+R5
+vtb
+!s110 1521946154
+!i10b 1
+!s100 AkXLGGG:8c??oJ[>iHBR_3
+IfKcWThWH94ncaC2Q@XVlo0
+R1
+R2
+w1521945240
+8E:/STI/Project/ModelSim/DAC_midspeed_dual/tb.v
+FE:/STI/Project/ModelSim/DAC_midspeed_dual/tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1521946154.000000
+!s107 E:/STI/Project/ModelSim/DAC_midspeed_dual/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/DAC_midspeed_dual/tb.v|
+!s101 -O0
+!i113 1
+R5
+vtop
+R0
+!i10b 1
+!s100 fGDCS?l3idD7K;Hb7PObS2
+I0SgGBJh@EM^C1JcBY1cWm0
+R1
+R2
+w1532001531
+8E:/STI/Project/ModelSim/DAC_midspeed_dual/top.v
+FE:/STI/Project/ModelSim/DAC_midspeed_dual/top.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/DAC_midspeed_dual/top.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/DAC_midspeed_dual/top.v|
+!s101 -O0
+!i113 1
+R5

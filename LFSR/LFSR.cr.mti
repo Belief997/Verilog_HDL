@@ -1,0 +1,87 @@
+E:/STI/Project/ModelSim/LFSR/caculate.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/LFSR/caculate.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module caculate
+
+Top level modules:
+	caculate
+
+} {} {}} E:/STI/Project/ModelSim/LFSR/display.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/LFSR/display.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module display
+
+Top level modules:
+	display
+
+} {} {}} E:/STI/Project/ModelSim/LFSR/tb.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/LFSR/tb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} E:/STI/Project/ModelSim/LFSR/Bin2Seg.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/LFSR/Bin2Seg.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Bin2Bcd
+-- Compiling module Bcd2Seg
+
+Top level modules:
+	Bin2Bcd
+	Bcd2Seg
+
+} {} {}} E:/STI/Project/ModelSim/LFSR/top.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/LFSR/top.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} E:/STI/Project/ModelSim/LFSR/DDS.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/LFSR/DDS.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dds
+
+Top level modules:
+	dds
+
+} {} {}} E:/STI/Project/ModelSim/LFSR/IIR.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/LFSR/IIR.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module IIR_2nd
+
+Top level modules:
+	IIR_2nd
+
+} {} {}} E:/STI/Project/ModelSim/LFSR/freq_count.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/LFSR/freq_count.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module FreMeasure
+
+Top level modules:
+	FreMeasure
+
+} {} {}} E:/STI/Project/ModelSim/LFSR/LFSR.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/LFSR/LFSR.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module LFSR
+
+Top level modules:
+	LFSR
+
+} {} {}} E:/STI/Project/ModelSim/LFSR/divider.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/LFSR/divider.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module divider
+
+Top level modules:
+	divider
+
+} {} {}} E:/STI/Project/ModelSim/LFSR/my_iir.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/LFSR/my_iir.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module my_iir
+
+Top level modules:
+	my_iir
+
+} {} {}} E:/STI/Project/ModelSim/LFSR/max_min.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/LFSR/max_min.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module max_min
+
+Top level modules:
+	max_min
+
+} {} {}}

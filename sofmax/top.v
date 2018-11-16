@@ -1,0 +1,46 @@
+
+module top /*#(
+	parameter J_TABLE = "j.dat",
+	parameter J_AW = 6,
+	parameter R_TABLE = "r.data",
+	parameter R_AW = 7
+)*/(
+	input clk, rst_n,
+	input [31:0] x
+//	output signed [33:0] z_in
+
+);
+
+
+
+wire [31:0] y;
+get_exp#(
+	.J_TABLE("j.dat"),
+	.R_TABLE("r_1.dat")
+) the_exp(
+	.clk(clk), .rst_n(1'b1),
+	.x(x),//10.23 (h4123AE14) -2.3(hC0133333)
+	.y(y)
+);
+endmodule 
+
+
+
+
+//wire signed [33:0] cosh, sinh, e;
+//reg signed [31:0] phase;
+//initial phase = 32'sh2000_0000  ;
+//
+////always@(posedge clk) begin
+////	phase <= phase >> 1;
+////
+////end
+//
+// cordic the_exp(
+//	.clk(clk), .rst_n(rst_n),
+//	.z_in(phase),
+//	.cosh(cosh), .sinh(sinh), .e(e)
+//
+//);
+
+//endmodule 

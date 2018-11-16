@@ -1,0 +1,36 @@
+{E:/STI/Project/ModelSim/FSM module/FSM.v} {1 {vlog -work work -stats=none {E:/STI/Project/ModelSim/FSM module/FSM.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module FSM
+
+Top level modules:
+	FSM
+
+} {} {}} {E:/STI/Project/ModelSim/FSM module/always_tb.v} {1 {vlog -work work -stats=none {E:/STI/Project/ModelSim/FSM module/always_tb.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module alwa_tb
+
+Top level modules:
+	alwa_tb
+
+} {} {}} {E:/STI/Project/ModelSim/FSM module/tb_fsm.v} {1 {vlog -work work -stats=none {E:/STI/Project/ModelSim/FSM module/tb_fsm.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb_fsm
+
+Top level modules:
+	tb_fsm
+
+} {} {}} {E:/STI/Project/ModelSim/FSM module/top_fsm.v} {1 {vlog -work work -stats=none {E:/STI/Project/ModelSim/FSM module/top_fsm.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module top_fsm
+
+Top level modules:
+	top_fsm
+
+} {} {}} {E:/STI/Project/ModelSim/FSM module/always_test.v} {1 {vlog -work work -stats=none {E:\STI\Project\ModelSim\FSM module\always_test.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module alw
+
+Top level modules:
+	alw
+
+} {} {}}

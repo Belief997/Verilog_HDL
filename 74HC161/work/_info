@@ -1,0 +1,186 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/STI/Project/ModelSim/ADF4351
+vA_74HC283
+Z0 !s110 1529658564
+!i10b 1
+!s100 @4IHQzTenRC9^eTailZzY2
+I68kfz>7JK[C<7eiMF?e3I0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/STI/Project/ModelSim/74HC161
+w1529657894
+8E:/STI/Project/ModelSim/74HC161/74HC283.v
+FE:/STI/Project/ModelSim/74HC161/74HC283.v
+L0 3
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1529658564.000000
+!s107 E:/STI/Project/ModelSim/74HC161/74HC283.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/74HC161/74HC283.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@a_74@h@c283
+vc74HC161
+!s110 1529649466
+!i10b 1
+!s100 BWRf?[AeE4=e6Z2M6czA52
+IX`1e[EDG:Rhz_z^lJfN_e3
+R1
+R2
+w1529649464
+Z6 8E:/STI/Project/ModelSim/74HC161/74HC161.v
+Z7 FE:/STI/Project/ModelSim/74HC161/74HC161.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1529649466.000000
+Z8 !s107 E:/STI/Project/ModelSim/74HC161/74HC161.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/74HC161/74HC161.v|
+!s101 -O0
+!i113 1
+R5
+nc74@h@c161
+vCounter_74HC161
+Z10 !s110 1529658563
+!i10b 1
+!s100 NoB=na;J6kC35YfL1C`M@3
+IVU5CL1WdhPAD6U<h:<dQl0
+R1
+R2
+w1529654137
+R6
+R7
+L0 4
+R3
+r1
+!s85 0
+31
+Z11 !s108 1529658563.000000
+R8
+R9
+!s101 -O0
+!i113 1
+R5
+n@counter_74@h@c161
+vD_74HC194
+!s110 1529654530
+!i10b 1
+!s100 bf1m:feQ3E[98VTNPUNfg0
+I4OcLdW8<H6Qa@f7G9Del?0
+R1
+R2
+w1529654529
+Z12 8E:/STI/Project/ModelSim/74HC161/74HC194.v
+Z13 FE:/STI/Project/ModelSim/74HC161/74HC194.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1529654530.000000
+Z14 !s107 E:/STI/Project/ModelSim/74HC161/74HC194.v|
+Z15 !s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/74HC161/74HC194.v|
+!s101 -O0
+!i113 1
+R5
+n@d_74@h@c194
+vS_74HC194
+R0
+!i10b 1
+!s100 Mfz8R2TeBJ?R52`G:W64L0
+IPaXL^N;@:J7HeKl8gBbf41
+R1
+R2
+w1529655554
+R12
+R13
+L0 3
+R3
+r1
+!s85 0
+31
+R11
+R14
+R15
+!s101 -O0
+!i113 1
+R5
+n@s_74@h@c194
+vtb_74HC161
+R10
+!i10b 1
+!s100 H@T273>:dd`E0?PLago581
+IbI<K_681R0TaSL9=5CZG61
+R1
+R2
+w1529654326
+8E:/STI/Project/ModelSim/74HC161/tb_74HC161.v
+FE:/STI/Project/ModelSim/74HC161/tb_74HC161.v
+L0 5
+R3
+r1
+!s85 0
+31
+R11
+!s107 E:/STI/Project/ModelSim/74HC161/tb_74HC161.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/74HC161/tb_74HC161.v|
+!s101 -O0
+!i113 1
+R5
+ntb_74@h@c161
+vtb_74HC194
+R0
+!i10b 1
+!s100 ?=4N=IR=^cBP=ddmLl7P91
+IV?0?4HYooOnT@<OnmzK[m1
+R1
+R2
+w1529656960
+8E:/STI/Project/ModelSim/74HC161/tb_74HC194.v
+FE:/STI/Project/ModelSim/74HC161/tb_74HC194.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/74HC161/tb_74HC194.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/74HC161/tb_74HC194.v|
+!s101 -O0
+!i113 1
+R5
+ntb_74@h@c194
+vtb_74HC283
+R0
+!i10b 1
+!s100 09`O5PG]YFR:b`n<8e5cI2
+I]29H^O[zSFEGQU@jV_8@o2
+R1
+R2
+w1529658562
+8E:/STI/Project/ModelSim/74HC161/tb_74HC283.v
+FE:/STI/Project/ModelSim/74HC161/tb_74HC283.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/STI/Project/ModelSim/74HC161/tb_74HC283.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/74HC161/tb_74HC283.v|
+!s101 -O0
+!i113 1
+R5
+ntb_74@h@c283

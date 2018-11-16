@@ -1,0 +1,139 @@
+
+
+module Sine_gen(
+	input clk,
+	input [5:0] flag_mod,
+	input [31:0] freq_c,
+	output reg signed [7:0] out, 
+	output [7:0] mod_m,
+	output 	mod_sk
+
+);
+//sin carry
+	reg [31:0] freq; initial freq = 32'd429_496_73;  //1M
+	always@(posedge clk)begin
+		freq <= freq_c;
+	end
+	
+	//reg [31:0] freq_0 = 32'd429_496_730;   //10M
+	//reg [31:0] freq_0 = 32'd429_496_7;//30;//100k
+	//reg [31:0] freq_0 = 32'd429_496_73;   //1M
+
+	wire [31:0] phaseShift = 'b0;
+	wire signed [7:0] sin;
+
+//fm
+/////////////////////////////////////////////////////
+wire [31:0] out_kc;
+reg [31:0] k_max;initial k_max = 32'b0;// 32'd429_497;//d214_748 //5k
+always@(posedge clk)begin
+	if(flag_mod == 6'b01_0101) k_max <= 32'd214_748;       //5k
+	else if(flag_mod == 6'b01_1010) k_max <= 32'd429_497;  //10k
+	else k_max <= 'b0;
+end
+
+
+///////////////////////////////////////////////////////////////////////
+//mod sin
+////////////////////////////////////////////////////
+wire [31:0] freq_am = 32'd429_50; //32'd429_50;//1k
+wire signed [7:0] sin_mod;
+//am
+wire signed [7:0] out_am;
+reg [15:0] m ; initial m = 'b0;//= 16'b1111_1111;// 8'b1111_1111;// mQn x * 2^n
+always@(posedge clk)begin
+	case(flag_mod)
+		6'd10_0001: m <= 16'hccd;  //0.1
+		6'd10_0010: m <= 16'h199a; //0.2
+		6'd10_0011: m <= 16'h2666; //0.3
+		6'd10_0100: m <= 16'h3333; //0.4
+		6'd10_0101: m <= 16'h4000; //0.5
+		6'd10_0110: m <= 16'h4ccd; //0.6
+		6'd10_0111: m <= 16'h599a; //0.7
+		6'd10_1000: m <= 16'h6666; //0.8
+		6'd10_1001: m <= 16'h7333; //0.9
+		6'd10_1010: m <= 16'h8000; //1.0
+		default: m <= 'b0;
+	endcase
+end
+//////////////////////////////////////////////////
+
+//cnt 10k
+///////////////////////////////////
+reg [31:0] cnt_10k; initial cnt_10k = 'b0;
+always@(posedge clk)begin
+	if(flag_mod[5:4] == 2'b11)begin
+		if(cnt_10k < 32'd9_999) cnt_10k <= cnt_10k + 1'b1;
+		else cnt_10k <= 'b0;
+	end
+	else cnt_10k <= 'b0;
+end
+wire en_10k = (cnt_10k == 32'd9_999);
+//////////////////////////////////////////////
+//psk, ask
+/////////////////////////////////////////////////////
+wire [7:0] sig_sk;
+always@(posedge clk)begin
+	if(flag_mod == 6'b11_0000)
+		out <= sig_sk[0]? (-8'sd1 * out_am) : out_am; //psk 
+	else if(flag_mod == 6'b11_0001)			    
+		out <= sig_sk[0]? out_am : 8'b0;	      //ask
+	else out <= out_am;
+
+end
+/////////////////////////////////////////////////////
+assign mod_m = sin_mod;
+assign mod_sk = sig_sk[0];
+
+//dds_carry
+    dds #( 
+	.PHASE_W (32), 
+	.DATA_W (8), 
+	.TABLE_AW  (12),
+	.MEM_FILE  ("SineTable_signed_4096X8.dat")
+) dds_c (
+       .FreqWord(out_kc),
+       .PhaseShift(phaseShift),
+       .clk(clk),
+       .ClkEn(1'b1),
+       .Out(sin)) ;
+
+//mod 1k
+    dds #( 
+	.PHASE_W (32), 
+	.DATA_W (8), 
+	.TABLE_AW  (12),
+	.MEM_FILE  ("SineTable_signed_4096X8.dat")
+) dds_mod (
+       .FreqWord(freq_am),
+       .PhaseShift(phaseShift),
+       .clk(clk),
+       .ClkEn(1'b1),
+       .Out(sin_mod)) ;
+///////////////////////////////////////
+//LFSR the_10kbps(
+//	.clk(clk), .en(en_10k),
+//	.out(sig_sk)
+//);
+LFSR the_10kbps(
+	.clk(clk), .clken(en_10k),
+	.lfsr(sig_sk)
+);
+//////////////////////////////////////////
+AM_mod the_am_mod(
+	.clk(clk), .rst_n(1'b1),
+	.c(sin),	// ? Q1.6
+	.x(sin_mod),	// Q1.7
+	.m(m),			// ? Q0.8
+	.sig(out_am) // Q2.6
+);
+//////////////////////////////////////////////
+FM_mod the_fm_mod(
+	.clk(clk), .rst_n(1'b1),
+	.x(sin_mod),     //Q1.7
+	.k_max(k_max),	  //Q32.0
+	.kc(freq_c),	  //Q32.0
+	.out_kc(out_kc)	  //Q32.0
+);
+
+endmodule 

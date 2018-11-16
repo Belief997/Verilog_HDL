@@ -1,0 +1,138 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dE:/STI/Project/ModelSim/test
+vBcd2Seg
+Z0 !s110 1509090319
+!i10b 1
+!s100 <bH1ELn;CPoG<I<_B@`lI0
+I1Y<TCn9j3B0k``9_CV8k90
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dE:/STI/Project/ModelSim/clock_fifth
+w1505540281
+8E:/STI/Project/ModelSim/clock_fifth/Bcd2Seg.v
+FE:/STI/Project/ModelSim/clock_fifth/Bcd2Seg.v
+L0 1
+Z3 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z4 !s108 1509090319.000000
+!s107 E:/STI/Project/ModelSim/clock_fifth/Bcd2Seg.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/clock_fifth/Bcd2Seg.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@bcd2@seg
+vBin2Bcd
+R0
+!i10b 1
+!s100 2FDZES_DbINLUT_Z:4CL92
+I`TGSf<VH:DPIWJY3<`B=A2
+R1
+R2
+w1505611530
+8E:/STI/Project/ModelSim/clock_fifth/Bin2Bcd.v
+FE:/STI/Project/ModelSim/clock_fifth/Bin2Bcd.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z6 !s108 1509090318.000000
+!s107 E:/STI/Project/ModelSim/clock_fifth/Bin2Bcd.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/clock_fifth/Bin2Bcd.v|
+!s101 -O0
+!i113 1
+R5
+n@bin2@bcd
+vclock
+Z7 !s110 1509090318
+!i10b 1
+!s100 h6jLSAP0US18]Wj4EFWdd3
+IYbc]RLkSSK33LHPP0nnjf3
+R1
+R2
+w1505613582
+8E:/STI/Project/ModelSim/clock_fifth/clock.v
+FE:/STI/Project/ModelSim/clock_fifth/clock.v
+L0 1
+R3
+r1
+!s85 0
+31
+R6
+!s107 E:/STI/Project/ModelSim/clock_fifth/clock.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/clock_fifth/clock.v|
+!s101 -O0
+!i113 1
+R5
+vkeys
+R7
+!i10b 1
+!s100 Jc02MnJKGiX4gf7LiQaD_2
+IZGnP1X;biDXEPQ^@NIcQg1
+R1
+R2
+w1505550957
+8E:/STI/Project/ModelSim/clock_fifth/keys.v
+FE:/STI/Project/ModelSim/clock_fifth/keys.v
+L0 1
+R3
+r1
+!s85 0
+31
+R6
+!s107 E:/STI/Project/ModelSim/clock_fifth/keys.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/clock_fifth/keys.v|
+!s101 -O0
+!i113 1
+R5
+vtb
+R7
+!i10b 1
+!s100 CCSM1RE1V9Vo^NKn?alR02
+IF1RHn=jKF6G]HVlKHkCTU3
+R1
+R2
+w1509090317
+8E:/STI/Project/ModelSim/clock_fifth/tb_clk.v
+FE:/STI/Project/ModelSim/clock_fifth/tb_clk.v
+L0 2
+R3
+r1
+!s85 0
+31
+R6
+!s107 E:/STI/Project/ModelSim/clock_fifth/tb_clk.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/STI/Project/ModelSim/clock_fifth/tb_clk.v|
+!s101 -O0
+!i113 1
+R5
+vtop_clk
+R0
+!i10b 1
+!s100 VHT27ANgbY6Xh[5XVDKnB3
+IolgZ67<3l?KPj[5KcjH=W0
+R1
+R2
+w1505610636
+8E:\STI\Project\ModelSim\clock_fifth\top_clk.v
+FE:\STI\Project\ModelSim\clock_fifth\top_clk.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:\STI\Project\ModelSim\clock_fifth\top_clk.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:\STI\Project\ModelSim\clock_fifth\top_clk.v|
+!s101 -O0
+!i113 1
+R5

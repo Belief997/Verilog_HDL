@@ -1,0 +1,33 @@
+E:/STI/Project/ModelSim/DACdriver/tb.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/DACdriver/tb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} E:/STI/Project/ModelSim/DACdriver/DDS.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/DACdriver/DDS.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dds
+
+Top level modules:
+	dds
+
+} {} {}} E:/STI/Project/ModelSim/DACdriver/top.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/DACdriver/top.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} E:/STI/Project/ModelSim/DACdriver/dac_driver.v {2 {vlog -work work -stats=none E:/STI/Project/ModelSim/DACdriver/dac_driver.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module dac_driver
+** Warning: E:/STI/Project/ModelSim/DACdriver/dac_driver.v(8): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+
+** Warning: E:/STI/Project/ModelSim/DACdriver/dac_driver.v(15): (vlog-2608) Keyword "unsigned" not allowed here in Verilog 2001.
+
+
+Top level modules:
+	dac_driver
+
+} {} {}}

@@ -1,0 +1,22 @@
+E:/STI/Project/ModelSim/DDS_driver/top.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/DDS_driver/top.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} E:/STI/Project/ModelSim/DDS_driver/tb.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/DDS_driver/tb.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} E:/STI/Project/ModelSim/DDS_driver/DDS_driver.v {1 {vlog -work work -stats=none E:/STI/Project/ModelSim/DDS_driver/DDS_driver.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module DDS_driver
+
+Top level modules:
+	DDS_driver
+
+} {} {}}

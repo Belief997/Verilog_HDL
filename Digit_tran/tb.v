@@ -1,0 +1,55 @@
+
+module tb;
+reg clk;
+initial clk='b0;
+always #5 clk <= ~clk;
+
+//wire [7:0]sig;
+//wire [11:0] noise;
+//
+//LFSR#( .W(8), .MASK (32'h11c) 
+//)the_sig(
+//	.clk(clk), .clken(1'b1),
+//	.lfsr(sig)
+//);
+//
+//LFSR#( .W(12), .MASK (32'h3053) 
+//)the_noise(
+//	.clk(clk), .clken(1'b1),
+//	.lfsr(noise)
+//);
+wire key1,key2, sig, noise, man, en0, clock;
+wire [3:0] rate;
+//wire
+top the_top(
+	.clk(clk),
+	.key1(key1), .key2(key2),
+	.rate(rate),
+	.sig(sig), .noise(noise), 
+	.man(man), .en0(en0), .clock(clock)
+);
+
+reg [31:0] data_f; initial data_f = 'b0;
+always@(posedge clk)begin
+	if(data_f < 32'd9999) data_f <= data_f + 1'd1;
+	else data_f <= 'b0;
+end
+wire en0_f = (data_f == 'b0);
+wire en1_f = (data_f == 'd4999);
+
+
+wire [7:0] max, min;
+//FIFO_cycle the_fifo(
+//	.clk(clk),
+//	.datain(data_f[7:0]),
+//	.en0(en0_f), .en1(en1_f),
+////	output [7:0] dataout,
+//	.max(max), .min(min)
+//
+//);
+
+
+
+
+
+endmodule 

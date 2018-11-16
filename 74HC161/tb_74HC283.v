@@ -1,0 +1,26 @@
+//tb for 74HC283
+//plz set run time longer than 80ns
+`timescale 1ns/1ps
+module tb_74HC283;
+reg [3:0] A, B;  //0~15
+reg Cin;
+wire [3:0] Sum;
+wire Cout;
+
+initial begin
+	A = 4'd4;
+	B = 4'd5;
+	Cin = 1'b0;       //4 + 5
+	#23 Cin = 1'b1;   //4 + 5 + 1
+	#23 A = 4'd12;    //12 + 5 + 1
+	#23 Cin = 1'd0;   //12 + 5 
+
+end
+
+A_74HC283 the_adder(
+	  .A(A), .B(B),
+	  .Cin(Cin),
+	  .Sum(Sum),
+	  .Cout(Cout)
+	  );
+endmodule 
