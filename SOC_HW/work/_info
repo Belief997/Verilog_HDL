@@ -1,0 +1,299 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/STI/Project/ModelSim_git/Verilog_HDL/BPC_gen
+T_opt
+!s110 1559669077
+Vn5ETjN2_AM[;UWMz75ZMm2
+04 18 4 work comparitor4bits_TB fast 0
+=1-18dbf22f6450-5cf6a955-4-62a0
+Z1 o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z2 OL;O;10.4;61
+R0
+T_opt1
+!s110 1559682213
+VS]U0GMN4NCEM^GVZohUkD3
+04 16 4 work p3hwlTestFixture fast 0
+=1-18dbf22f6450-5cf6dca4-367-160c
+R1
+n@_opt1
+R2
+R0
+vcomp_2bit_a
+Z3 !s110 1559682210
+!i10b 1
+!s100 [a3FM`UXJe?OzO2_TAVXb1
+IzhX=:=kP]CLo<;KSCW3H73
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 dE:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW
+Z6 w1559682208
+Z7 8E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/HW1_COMP2BIT.v
+Z8 FE:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/HW1_COMP2BIT.v
+L0 2
+Z9 OL;L;10.4;61
+r1
+!s85 0
+31
+Z10 !s108 1559682210.911000
+Z11 !s107 E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/HW1_COMP2BIT.v|
+Z12 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/HW1_COMP2BIT.v|
+!i113 0
+Z13 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vcomp_2bit_c
+R3
+!i10b 1
+!s100 71g@AmF:HNG><V[4Fe7QM2
+IAH4M[`d2;bAl@FL:Y2Zfg3
+R4
+R5
+R6
+R7
+R8
+L0 14
+R9
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R13
+vcomparatorBehavior4bits
+Z14 !s110 1559697418
+!i10b 1
+!s100 >5_nmG`H[fVe`LG[g=g280
+I;:U>aU6HzaMdfDLj4Ni0G3
+R4
+R5
+w1559667802
+8E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/comparatorBehavior4bits.v
+FE:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/comparatorBehavior4bits.v
+L0 2
+R9
+r1
+!s85 0
+31
+!s108 1559697418.794000
+!s107 E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/comparatorBehavior4bits.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/comparatorBehavior4bits.v|
+!i113 0
+R13
+ncomparator@behavior4bits
+vcomparatorExpressions
+Z15 !s110 1559697419
+!i10b 1
+!s100 QoC5CVYkjYSH5GTAi]mSH1
+Ic<>;IfWL?m72b=jg<[nm>1
+R4
+R5
+Z16 w1559697286
+R7
+R8
+L0 36
+R9
+r1
+!s85 0
+31
+Z17 !s108 1559697419.258000
+R11
+R12
+!i113 0
+R13
+ncomparator@expressions
+vcomparatorGates
+R15
+!i10b 1
+!s100 nMK2[U2_eeFOi@JZT0izJ2
+IgZfMJ>YQi:nc1;OZcdmC@2
+R4
+R5
+R16
+R7
+R8
+L0 1
+R9
+r1
+!s85 0
+31
+R17
+R11
+R12
+!i113 0
+R13
+ncomparator@gates
+vcomparatorTruthTable
+R15
+!i10b 1
+!s100 <IP^6W0ilK@PgCO?H_`m]2
+IQfG<>7?ZOg?JKcOMS<8lD2
+R4
+R5
+R16
+R7
+R8
+L0 50
+R9
+r1
+!s85 0
+31
+R17
+R11
+R12
+!i113 0
+R13
+ncomparator@truth@table
+vcomparitor4bits_TB
+R14
+!i10b 1
+!s100 cK9;dbgn3OFcaN2QT=_TQ1
+IcL5SRzDbC5<?8GPhUaI_D0
+R4
+R5
+w1559669023
+8E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/comparitor4bits_TB.v
+FE:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/comparitor4bits_TB.v
+L0 2
+R9
+r1
+!s85 0
+31
+!s108 1559697418.905000
+!s107 E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/comparitor4bits_TB.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/comparitor4bits_TB.v|
+!i113 0
+R13
+ncomparitor4bits_@t@b
+vFSM
+!s110 1559673730
+!i10b 1
+!s100 P]9HX@Rlk6=<FWdD:JEk42
+Iz4><6X4RNHjL2cSi78?kK0
+R4
+R5
+w1559673533
+Z18 8E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/HW1_FSM.v
+Z19 FE:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/HW1_FSM.v
+L0 2
+R9
+r1
+!s85 0
+31
+!s108 1559673730.200000
+Z20 !s107 E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/HW1_FSM.v|
+Z21 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/HW1_FSM.v|
+!i113 0
+R13
+n@f@s@m
+vHW1_FSM
+!s110 1559674161
+!i10b 1
+!s100 e1z<Bh=CiAV>dC3@iQ_Z82
+Ie_mlE88XM>7`TAG=S0FZK2
+R4
+R5
+w1559674147
+R18
+R19
+L0 2
+R9
+r1
+!s85 0
+31
+!s108 1559674161.659000
+R20
+R21
+!i113 0
+R13
+n@h@w1_@f@s@m
+vHW1_FSM_4
+R15
+!i10b 1
+!s100 `BRcN7DL9MD7M^QhJj`5h3
+I@1:RTmXJ0i@GhJ>j9Y44l3
+R4
+R5
+Z22 w1559676573
+R18
+R19
+L0 2
+R9
+r1
+!s85 0
+31
+Z23 !s108 1559697419.016000
+R20
+R21
+!i113 0
+R13
+n@h@w1_@f@s@m_4
+vHW1_FSM_8
+R15
+!i10b 1
+!s100 fhGWBk:_I830Glf1d=<`a2
+Ij8RS:XOe9C?4J3dAiUgEV3
+R4
+R5
+R22
+R18
+R19
+L0 49
+R9
+r1
+!s85 0
+31
+R23
+R20
+R21
+!i113 0
+R13
+n@h@w1_@f@s@m_8
+vp3hwlTestFixture
+R15
+!i10b 1
+!s100 0d]4]1:[Ae_DNS81hF?9J2
+Ik3ZfSB5YggCYO@kRFbRJ^3
+R4
+R5
+w1559697416
+8E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/p3hw1TestFixture.v
+FE:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/p3hw1TestFixture.v
+L0 2
+R9
+r1
+!s85 0
+31
+!s108 1559697419.364000
+!s107 E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/p3hw1TestFixture.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/p3hw1TestFixture.v|
+!i113 0
+R13
+np3hwl@test@fixture
+vtb_HW1_FSM
+R15
+!i10b 1
+!s100 5;glhm5g5EG@Yz^[ITPCQ1
+ImCNn0o`<A=4MkD5K3`MTP1
+R4
+R5
+w1559677245
+8E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/tb_HW1_FSM.v
+FE:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/tb_HW1_FSM.v
+L0 2
+R9
+r1
+!s85 0
+31
+!s108 1559697419.148000
+!s107 E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/tb_HW1_FSM.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/tb_HW1_FSM.v|
+!i113 0
+R13
+ntb_@h@w1_@f@s@m

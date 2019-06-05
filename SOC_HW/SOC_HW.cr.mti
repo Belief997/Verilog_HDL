@@ -1,0 +1,44 @@
+E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/HW1_FSM.v {2 {vlog -work work -vopt -stats=none E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/HW1_FSM.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module HW1_FSM_4
+-- Compiling module HW1_FSM_8
+** Warning: E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/HW1_FSM.v(65): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+
+Top level modules:
+	HW1_FSM_4
+	HW1_FSM_8
+
+} {} {}} E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/tb_HW1_FSM.v {1 {vlog -work work -vopt -stats=none E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/tb_HW1_FSM.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module tb_HW1_FSM
+
+Top level modules:
+	tb_HW1_FSM
+
+} {} {}} E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/comparatorBehavior4bits.v {1 {vlog -work work -vopt -stats=none E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/comparatorBehavior4bits.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module comparatorBehavior4bits
+
+Top level modules:
+	comparatorBehavior4bits
+
+} {} {}} E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/HW1_COMP2BIT.v {1 {vlog -work work -vopt -stats=none E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/HW1_COMP2BIT.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module comparatorGates
+-- Compiling module comparatorExpressions
+-- Compiling module comparatorTruthTable
+
+Top level modules:
+	comparatorGates
+	comparatorExpressions
+	comparatorTruthTable
+
+} {} {}} E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/comparitor4bits_TB.v {1 {vlog -work work -vopt -stats=none E:/STI/Project/ModelSim_git/Verilog_HDL/SOC_HW/comparitor4bits_TB.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module comparitor4bits_TB
+
+Top level modules:
+	comparitor4bits_TB
+
+} {} {}}
